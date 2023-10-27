@@ -8,8 +8,8 @@ import Icon3 from "react-native-vector-icons/Fontisto";
 const Login = () => {
   const navigation = useNavigation();
 
-  const startRegister = () => {
-    navigation.navigate("StartRegister");
+  const Register = () => {
+    navigation.navigate("Register");
   };
 
   return (
@@ -66,7 +66,7 @@ const Login = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.registerButton} onPress={startRegister}>
+        <TouchableOpacity style={styles.registerButton} onPress={Register}>
           <Text style={styles.register}>Não possui conta? Crie aqui</Text>
         </TouchableOpacity>
       </View>

@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import Login from './src/screens/Login';
-import StartRegister from './src/screens/StartRegister';
+import Register from './src/screens/Register';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +16,7 @@ export default function App() {
       await Font.loadAsync({
         'black': require('./assets/fonts/Axiforma-Black.ttf'),
         'bold': require('./assets/fonts/Axiforma-Bold.ttf'),
+        'medium': require('./assets/fonts/Axiforma-Medium.ttf'),
         'thin': require('./assets/fonts/Axiforma-Thin.ttf'),
         'light': require('./assets/fonts/Axiforma-Light.ttf'),
       });
@@ -37,7 +38,7 @@ export default function App() {
     <NavigationContainer style={styles.main}>
       <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
-        <Stack.Screen name="StartRegister" component={StartRegister} options={{ headerShown: false }}/>
+        <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
