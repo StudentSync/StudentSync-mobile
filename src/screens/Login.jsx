@@ -4,7 +4,6 @@ import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon3 from "react-native-vector-icons/Fontisto";
-import Profile from "./Profile";
 
 const Login = () => {
   const navigation = useNavigation();
@@ -12,12 +11,6 @@ const Login = () => {
   const startRegister = () => {
     navigation.navigate("StartRegister");
   };
-  
-  const navigationtwo = useNavigation();
-  const profile = () => {
-    navigationtwo.navigate("Profile");
-  };
-
 
   return (
     <KeyboardAvoidingView style={styles.background}>
@@ -75,10 +68,6 @@ const Login = () => {
 
         <TouchableOpacity style={styles.registerButton} onPress={startRegister}>
           <Text style={styles.register}>Não possui conta? Crie aqui</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.profileButton} onPress={profile}>
-          <Text style={styles.register}>Perfil</Text>
         </TouchableOpacity>
 
       </View>

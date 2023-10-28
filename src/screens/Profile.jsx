@@ -35,6 +35,22 @@ function Profile() {
 
             <View style={styles.card}>
 
+                <View style={styles.officeContainer}>
+                  <View style={styles.officeCard}>
+                    <Text style={styles.officeUser}>Discente</Text>
+                  </View>
+                </View>
+                <View style={styles.courseContainer}>
+                  <View style={styles.courseCard}>
+                    <Text style={styles.courseText}>Análise e Desenvolvimento de Sistemas</Text>
+                  </View>
+                </View>
+                <View style={styles.semesterContainer}>
+                  <View style={styles.semesterCard}>
+                    <Text style={styles.semesterText}>2º semestre</Text>
+                  </View>
+                </View>
+
             </View>
 
         </View>
@@ -94,15 +110,70 @@ const styles = StyleSheet.create({
         marginBottom:0,
     },
     photoUser:{
-        marginBottom:55,
+        marginBottom:45,
     },
     card:{
       flex:4.5,
       backgroundColor:"#223843",
       width: "112%",
-      height: "150%",
+      height: "100%",
       alignItems: "center",
       justifyContent:"center",
       borderRadius: 42,
-    }
+    },
+    officeContainer: {
+      flex: 1,
+      justifyContent: "flex-start",
+      marginTop: 25,
+      width:"30%"
+    },
+    officeCard: {
+      alignItems: "center",
+      justifyContent: 'center',
+      backgroundColor: "#f71735",
+      borderRadius: 30,
+      width: "100%",
+      height: "35%"
+    },
+    officeUser: {
+      color: "#eff1f3",
+      fontFamily: "medium",
+      fontSize: 20,
+    },
+    courseContainer:{
+      flex: 1,
+      justifyContent: "flex-start",
+      marginTop: 0,
+    },
+    courseCard: {
+      flex: 1,
+      justifyContent: "flex-start",
+      width: "70%",
+    },
+    courseText: {
+      color: "#eff1f3",
+      fontFamily: "medium",
+      fontSize: 20,
+      textAlign: "center",
+    },
+    semesterContainer:{
+      flex: 4,
+      justifyContent: "flex-start",
+      marginTop: 0,
+      width: "36%"
+    },
+    semesterCard: {
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#0dab76",
+      borderRadius: 30,
+      width: "100%",
+      height: "10%"
+    },
+    semesterText: {
+      color: "#eff1f3",
+      fontFamily: "medium",
+      fontSize: 20,
+      textAlign: "center",
+    },
   });
