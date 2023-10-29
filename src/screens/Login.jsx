@@ -69,6 +69,7 @@ const Login = () => {
         <TouchableOpacity style={styles.registerButton} onPress={Register}>
           <Text style={styles.register}>Não possui conta? Crie aqui</Text>
         </TouchableOpacity>
+
       </View>
     </KeyboardAvoidingView>
   );
