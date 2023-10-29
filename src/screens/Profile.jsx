@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, KeyboardAvoidingView, Text, StyleSheet } from "react-native";
+import { View, KeyboardAvoidingView, Text, StyleSheet, TextInput } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons"
+import Icon3 from 'react-native-vector-icons/Feather'
 
 function Profile() {
 
@@ -40,22 +41,44 @@ function Profile() {
                     <Text style={styles.officeUser}>Discente</Text>
                   </View>
                 </View>
+
                 <View style={styles.courseContainer}>
                   <View style={styles.courseCard}>
                     <Text style={styles.courseText}>Análise e Desenvolvimento de Sistemas</Text>
                   </View>
                 </View>
+
                 <View style={styles.semesterContainer}>
                   <View style={styles.semesterCard}>
                     <Text style={styles.semesterText}>2º semestre</Text>
                   </View>
                 </View>
 
+                <View style = {styles.disponibilityContainer}>
+                  <View style={styles.disponibilityCard}>
+                    <View style={styles.label}>
+                      <Icon3 
+                        style={styles.iconLabel}
+                        name="edit-2" size={20} color="#223843" 
+                      />
+                      <Text style={styles.textLabel}>HORÁRIOS DISPONIVEIS</Text>
+                    </View>
+                    
+                    <View style={styles.viewInput}>  
+                      <TextInput
+                        style={styles.input}
+                        placeholderTextColor="#0dab76"
+                        placeholder="Segunda, de 10h às 11h30"
+                        autoCorrect={false}
+                      />
+                    </View>
+                    
+                  </View>
+                </View>
+
             </View>
 
         </View>
-          
-
     </KeyboardAvoidingView>
   )
 }
@@ -143,7 +166,6 @@ const styles = StyleSheet.create({
     courseContainer:{
       flex: 1,
       justifyContent: "flex-start",
-      marginTop: 0,
     },
     courseCard: {
       flex: 1,
@@ -153,14 +175,13 @@ const styles = StyleSheet.create({
     courseText: {
       color: "#eff1f3",
       fontFamily: "medium",
-      fontSize: 20,
+      fontSize: 18,
       textAlign: "center",
     },
     semesterContainer:{
-      flex: 4,
+      flex: 1,
       justifyContent: "flex-start",
-      marginTop: 0,
-      width: "36%"
+      width: "33%"
     },
     semesterCard: {
       justifyContent: "center",
@@ -168,12 +189,57 @@ const styles = StyleSheet.create({
       backgroundColor: "#0dab76",
       borderRadius: 30,
       width: "100%",
-      height: "10%"
+      height: "38%"
     },
     semesterText: {
       color: "#eff1f3",
       fontFamily: "medium",
-      fontSize: 20,
+      fontSize: 18,
       textAlign: "center",
+    },
+    disponibilityContainer: {
+      flex:4,
+      justifyContent: "flex-start",
+      alignItems: "center",
+      width: "90%",
+      height: "20%",
+    },
+    disponibilityCard: {
+      justifyContent: "flex-start",
+      alignItems: "center",
+      backgroundColor: "#eff1f3",
+      borderRadius: 30,
+      width: "85%",
+      height: "50%",
+    },
+    label: {
+      flex: 0.6,
+      alignItems: "flex-start",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginTop: 10,
+      width: "100%",
+      height:"20%",
+    },
+    textLabel: {
+      marginRight: 70,
+      marginTop: 10, 
+      fontFamily: "light",
+      fontSize: 14,
+      color: "#223843",
+    },
+    iconLabel:{
+      marginRight: "auto",
+      marginLeft: 20,
+      marginTop: 5,
+    },
+    input: {
+      backgroundColor: "transparent",
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: 10,
+      color: "#223843",
+      fontFamily: "light",
+      fontSize: 17,
     },
   });
