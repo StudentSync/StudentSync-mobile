@@ -4,6 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon3 from "react-native-vector-icons/Fontisto";
+import { COLORS } from "../utils/Colors";
 
 const Login = () => {
   const navigation = useNavigation();
@@ -28,7 +29,7 @@ const Login = () => {
             style={styles.emailIcon}
             name="email-outline"
             size={28}
-            color="#fff"
+            color={COLORS.white}
           />
           <TextInput
             style={styles.input}
@@ -45,7 +46,7 @@ const Login = () => {
             style={styles.lockedIcon}
             name="locked"
             size={28}
-            color="#fff"
+            color={COLORS.white}
           />
           <TextInput
             style={styles.input}
@@ -62,7 +63,7 @@ const Login = () => {
             style={styles.iconContainer}
             name="arrowright"
             size={28}
-            color="#223843"
+            color={COLORS.primary}
           />
         </TouchableOpacity>
 
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#223843",
+    backgroundColor: COLORS.primary,
   },
   containerLogo: {
     flex: 1,
@@ -89,13 +90,13 @@ const styles = StyleSheet.create({
     marginTop: 32,
   },
   logo: {
-    color: "#0DAB76",
+    color: COLORS.secondary,
     fontFamily: "black",
     fontSize: 40,
     letterSpacing: -2,
   },
   subTitle: {
-    color: "#fff",
+    color: COLORS.white,
     fontFamily: "light",
     fontSize: 16,
   },
@@ -111,14 +112,14 @@ const styles = StyleSheet.create({
     marginTop: 8, 
     fontFamily: "thin",
     fontSize: 14,
-    color: "#fff",
+    color: COLORS.white,
   },
   viewInput: {
     flexDirection: "row",
     alignItems: "center",
     gap: 24,
     borderWidth: 1,
-    borderColor: "#fff",
+    borderColor: COLORS.white,
     borderRadius: 20,
     width: "90%",
     height: 64,
@@ -127,7 +128,7 @@ const styles = StyleSheet.create({
     marginTop: 18,
     backgroundColor: "transparent",
     marginBottom: 15,
-    color: "#fff",
+    color: COLORS.white,
     fontFamily: "light",
     fontSize: 17,
   },
@@ -146,7 +147,7 @@ const styles = StyleSheet.create({
     height: 48,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#0DAB76",
+    backgroundColor: COLORS.secondary,
     borderRadius: 20,
   },
   acess: {
@@ -154,12 +155,12 @@ const styles = StyleSheet.create({
     marginLeft: 90,
     fontFamily: "black",
     fontSize: 24,
-    color: "#223843",
+    color: COLORS.primary,
   },
   register: {
     marginTop: 10,
     fontFamily: "light",
-    color: "#fff",
+    color: COLORS.white,
     textDecorationLine: "underline",
   },
 });

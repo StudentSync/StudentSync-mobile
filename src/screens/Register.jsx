@@ -14,6 +14,7 @@ import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon3 from "react-native-vector-icons/Fontisto";
 import Icon4 from "react-native-vector-icons/FontAwesome5";
 import Checkbox from "expo-checkbox";
+import { COLORS } from "../utils/Colors";
 
 const Register = () => {
   const navigation = useNavigation();
@@ -22,11 +23,27 @@ const Register = () => {
     navigation.navigate("Login");
   };
 
+  const [name, setName] = useState("");
+
+  const office = () => {
+    const fullName = name;
+    const partsName = fullName.split(" ");
+  
+    const firstName = partsName.length > 0 ? partsName[0] : "";
+
+    navigation.navigate("Office", { name: firstName });
+  };
+
   const [isChecked, setChecked] = useState(false);
+
+
+  const updateName = (text) => {
+    setName(text);
+  };
 
   return (
     <LinearGradient
-      colors={["#0DAB76", "#223843"]}
+      colors={[COLORS.secondary, COLORS.primary]}
       locations={[0.3, 0.9]}
       style={styles.gradient}
     >
@@ -45,14 +62,15 @@ const Register = () => {
               style={styles.userIcon}
               name="user-circle"
               size={28}
-              color="#fff"
+              color={COLORS.white}
             />
             <TextInput
               style={styles.input}
               placeholderTextColor="#aaa"
               placeholder="John Doe"
               autoCorrect={false}
-              onChangeText={() => {}}
+              value={name}
+              onChangeText={updateName}
             />
           </View>
 
@@ -62,7 +80,7 @@ const Register = () => {
               style={styles.emailIcon}
               name="email-outline"
               size={28}
-              color="#fff"
+              color={COLORS.white}
             />
             <TextInput
               style={styles.input}
@@ -79,7 +97,7 @@ const Register = () => {
               style={styles.lockedIcon}
               name="locked"
               size={28}
-              color="#fff"
+              color={COLORS.white}
             />
             <TextInput
               style={styles.input}
@@ -104,7 +122,7 @@ const Register = () => {
             </Text>
           </View>
 
-          <TouchableOpacity style={styles.acessButton}>
+          <TouchableOpacity style={styles.acessButton} onPress={office}>
             <Text style={styles.acess}>Continuar</Text>
             <Icon
               style={styles.iconContainer}
