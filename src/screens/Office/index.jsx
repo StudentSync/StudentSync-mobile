@@ -3,84 +3,61 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity,
   Text,
-  StyleSheet,
 } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
+import React from "react";
+import { styles } from "./style";
+import { LinearGradient } from "expo-linear-gradient";
+import { COLORS } from "../../utils/Colors";
+import Icons from "react-native-vector-icons/FontAwesome5";
 
 const Office = () => {
   const navigation = useNavigation();
+  const route = useRoute();
+
+  const name = route.params?.name || '';
+
+  const RegisterTeacher = () => {
+    navigation.navigate("RegisterTeacher");
+  };
 
   return (
-    <KeyboardAvoidingView style={styles.background}>
-      <View style={styles.containerLogo}>
-        <Text style={styles.logo}>Qual seu cargo?</Text>
-        <Text style={styles.subTitle}>Escolha um para continuar</Text>
-      </View>
+    <LinearGradient
+      colors={[COLORS.primary, COLORS.secondary]}
+      locations={[0.3, 0.9]}
+      style={styles.gradient}
+    >
+      <KeyboardAvoidingView style={styles.background}>
+        <View style={styles.containerLogo}>
+          <Text style={styles.title}>Olá {name}!</Text>
+          <Text style={styles.subTitle}>Selecione um para continuar</Text>
+          <Text style={styles.textSelection}>Você é:</Text>
+        </View>
 
-      <View style={styles.navBar}>
-        <TouchableOpacity style={styles.navItem} onPress={directorPage}>
-          
-          <Text style={styles.navText}>Diretor</Text>
-        </TouchableOpacity>
+        <View style={styles.navBar}>
+          <TouchableOpacity style={styles.navItem} >
+          <Icons
+              style={styles.emailIcon}
+              name="user-graduate"
+              size={86}
+              color={COLORS.white}
+            />
+            <Text style={styles.navText}>Estudante</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.navItem} onPress={coordinatorPage}>
-          
-          <Text style={styles.navText}>Coordenador</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.navItem} onPress={secretaryPage}>
-          
-          <Text style={styles.navText}>Secretário Acadêmico</Text>
-        </TouchableOpacity>
-      </View>
-    </KeyboardAvoidingView>
+          <TouchableOpacity style={styles.navItem} onPress={RegisterTeacher}>
+          <Icons
+              style={styles.emailIcon}
+              name="user-tie"
+              size={86}
+              color={COLORS.white}
+            />
+            <Text style={styles.navText}>Docente</Text>
+          </TouchableOpacity>
+        </View>
+      </KeyboardAvoidingView>
+    </LinearGradient>
   );
 };
-
-const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(22,38,43,1)",
-  },
-  containerLogo: {
-    flex: 0.4,
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: 36,
-  },
-  logo: {
-    color: "#0DAB76",
-    fontFamily: "Montserrat_700Bold",
-    fontSize: 36,
-  },
-  subTitle: {
-    color: "#fff",
-    fontFamily: "Montserrat_500Medium",
-    fontSize: 16,
-  },
-  navBar: {
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  navItem: {
-    alignItems: "center",
-    padding: 36,
-  },
-  navImg: {
-    width: 50,
-    height: 50,
-    tintColor: "white",
-  },
-  navText: {
-    fontFamily: "Montserrat_500Medium",
-    fontSize: 18,
-    color: "#0DAB76",
-    marginTop: 10,
-    marginBottom: 24,
-  },
-});
 
 export default Office;
