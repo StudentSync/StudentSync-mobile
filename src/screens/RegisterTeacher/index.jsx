@@ -10,7 +10,7 @@ import {
 import { SelectList } from "react-native-dropdown-select-list";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
-import styles from "./style.jsx";
+import { styles } from "./style";
 
 const RegisterTeacher = () => {
   
