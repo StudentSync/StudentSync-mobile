@@ -100,8 +100,32 @@ export const styles = StyleSheet.create({
       fontSize: 13,
     },
     dropDown: {
-      color: "#eff1f3",
-    }
+      borderColor: "rgba(0,0,0,0.2)",
+    },
+    textDropDown: {
+      color:"#eff1f3",
+      textAlign: "center",
+      fontSize: 15,
+      fontFamily: "thin",
+    },
+    acessButton: {
+      flexDirection: "row",
+      marginTop: 24,
+      marginBottom: 5,
+      width: "90%",
+      height: 48,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#223843",
+      borderRadius: 20,
+    },
+    acess: {
+      marginHorizontal: 64,
+      marginLeft: 90,
+      fontFamily: "black",
+      fontSize: 24,
+      color: "#fff",
+    },
 });
 
 export default styles;
