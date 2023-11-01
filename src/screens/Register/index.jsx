@@ -14,7 +14,7 @@ import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
 import Icon3 from "react-native-vector-icons/Fontisto";
 import Icon4 from "react-native-vector-icons/FontAwesome5";
 import Checkbox from "expo-checkbox";
-import { COLORS } from "../utils/Colors";
+import { COLORS } from "../../utils/Colors";
 
 const Register = () => {
   const navigation = useNavigation();

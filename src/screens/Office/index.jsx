@@ -17,6 +17,10 @@ const Office = () => {
 
   const name = route.params?.name || '';
 
+  const RegisterTeacher = () => {
+    navigation.navigate("RegisterTeacher");
+  };
+
   return (
     <LinearGradient
       colors={[COLORS.primary, COLORS.secondary]}
@@ -31,7 +35,7 @@ const Office = () => {
         </View>
 
         <View style={styles.navBar}>
-          <TouchableOpacity style={styles.navItem}>
+          <TouchableOpacity style={styles.navItem} >
           <Icons
               style={styles.emailIcon}
               name="user-graduate"
@@ -41,7 +45,7 @@ const Office = () => {
             <Text style={styles.navText}>Estudante</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.navItem}>
+          <TouchableOpacity style={styles.navItem} onPress={RegisterTeacher}>
           <Icons
               style={styles.emailIcon}
               name="user-tie"
