@@ -23,6 +23,10 @@ const Register = () => {
     navigation.navigate("Login");
   };
 
+  const Office = () => {
+    navigation.navigate("Office");
+  };
+
   const [name, setName] = useState("");
 
   const office = () => {
@@ -122,7 +126,7 @@ const Register = () => {
             </Text>
           </View>
 
-          <TouchableOpacity style={styles.acessButton} onPress={office}>
+          <TouchableOpacity style={styles.acessButton} onPress={Office}>
             <Text style={styles.acess}>Continuar</Text>
             <Icon
               style={styles.iconContainer}

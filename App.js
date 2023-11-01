@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
-import Office from './src/Office';
+import Office from './src/screens/Office';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +20,6 @@ export default function App() {
         'medium': require('./assets/fonts/Axiforma-Medium.ttf'),
         'thin': require('./assets/fonts/Axiforma-Thin.ttf'),
         'light': require('./assets/fonts/Axiforma-Light.ttf'),
-        'book': require('./assets/fonts/Axiforma-Book.ttf')
       });
       setIsFontLoaded(true);
     }
