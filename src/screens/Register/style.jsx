@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
     gradient: {
@@ -25,13 +26,13 @@ export const styles = StyleSheet.create({
       marginTop: 32,
     },
     title: {
-      color: "#223843",
+      color: COLORS.primary,
       fontFamily: "black",
       fontSize: 40,
       letterSpacing: -2,
     },
     subTitle: {
-      color: "#fff",
+      color: COLORS.white,
       fontFamily: "light",
       fontSize: 16,
     },
@@ -41,14 +42,14 @@ export const styles = StyleSheet.create({
       marginTop: 8,
       fontFamily: "thin",
       fontSize: 14,
-      color: "#fff",
+      color: COLORS.white,
     },
     viewInput: {
       flexDirection: "row",
       alignItems: "center",
       gap: 24,
       borderWidth: 1,
-      borderColor: "#fff",
+      borderColor: COLORS.white,
       borderRadius: 20,
       width: "90%",
       height: 64,
@@ -57,7 +58,7 @@ export const styles = StyleSheet.create({
       marginTop: 18,
       backgroundColor: "transparent",
       marginBottom: 15,
-      color: "#fff",
+      color: COLORS.white,
       fontFamily: "light",
       fontSize: 17,
     },
@@ -80,14 +81,14 @@ export const styles = StyleSheet.create({
       marginTop: 52,
     },
     checkbox: {
-      borderColor: "#fff",
-      backgroundColor: "#fff",
+      borderColor: COLORS.white,
+      backgroundColor: COLORS.white,
       marginBottom: 2,
     },
     paragraph: {
       fontFamily: "light",
       fontSize: 12,
-      color: "#fff",
+      color: COLORS.white,
     },
     acessButton: {
       flexDirection: "row",
@@ -97,7 +98,7 @@ export const styles = StyleSheet.create({
       height: 48,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "#223843",
+      backgroundColor:  COLORS.primary,
       borderRadius: 20,
     },
     acess: {
@@ -105,11 +106,11 @@ export const styles = StyleSheet.create({
       marginLeft: 90,
       fontFamily: "black",
       fontSize: 24,
-      color: "#fff",
+      color: COLORS.white,
     },
     loginButton: {
       borderWidth: 1,
-      borderColor: "#fff",
+      borderColor: COLORS.white,
       paddingHorizontal: 36,
       paddingVertical: 10,
       borderRadius: 8,
@@ -118,6 +119,6 @@ export const styles = StyleSheet.create({
     login: {
       fontFamily: "medium",
       fontSize: 16,
-      color: "#fff",
+      color: COLORS.white,
     },
 });
