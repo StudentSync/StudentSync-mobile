@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
       flex: 1,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: COLORS.white,
+      backgroundColor: COLORS.primary,
     },
     container: {
       flex: 1.5,
@@ -14,4 +14,35 @@ export const styles = StyleSheet.create({
       width: "90%",
       gap: 5,
     },
-});
+    photoUser: {
+      marginTop: 70,
+      marginRight: "auto",
+      marginLeft: 10,
+    },
+    containerNavigation: {
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginTop: 32,
+      marginLeft: 10,
+    },
+    containerTitle: {
+      flex: 1,
+      justifyContent: "space-between",
+      marginTop: 4,
+      marginLeft: 12,
+    },
+    title: {
+      color: COLORS.white,
+      fontFamily: "light",
+      fontSize: 20,
+    },
+    iconsNavigation: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "space-between",
+      marginTop: 25,
+    },
+  
+    
+  });
