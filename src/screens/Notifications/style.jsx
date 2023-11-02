@@ -43,6 +43,21 @@ export const styles = StyleSheet.create({
       justifyContent: "space-between",
       marginTop: 25,
     },
-  
-    
-  });
+    containerNotification:{
+      flex: 10,
+      alignItems: "center",
+      justifyContent: "space-around",
+      width: "90%",
+      height: "50%",
+      marginBottom: 120,
+    },
+    cardNotification: {
+      backgroundColor: COLORS.secondary,
+      alignItems: "flex-start",
+      justifyContent: "flex-start",
+      width: "100%",
+      height: "32%",
+      borderRadius: 20,
+      
+    },
+});
