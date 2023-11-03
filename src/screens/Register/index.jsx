@@ -23,18 +23,12 @@ const Register = () => {
     navigation.navigate("Login");
   };
 
-  const Office = () => {
-    navigation.navigate("Office");
-  };
-
   const [name, setName] = useState("");
 
   const office = () => {
     const fullName = name;
     const partsName = fullName.split(" ");
-  
     const firstName = partsName.length > 0 ? partsName[0] : "";
-
     navigation.navigate("Office", { name: firstName });
   };
 
@@ -126,7 +120,7 @@ const Register = () => {
             </Text>
           </View>
 
-          <TouchableOpacity style={styles.acessButton} onPress={Office}>
+          <TouchableOpacity style={styles.acessButton} onPress={office}>
             <Text style={styles.acess}>Continuar</Text>
             <Icon
               style={styles.iconContainer}

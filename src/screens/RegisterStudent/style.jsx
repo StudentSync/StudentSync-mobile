@@ -36,11 +36,8 @@ export const styles = StyleSheet.create({
       flex: 3.2,
       alignItems: "center",
       width: "90%",
-      gap: 5,
     },
     labelAbout: {
-      marginLeft: 0,
-      marginTop: 8,
       fontFamily: "light",
       fontSize: 15,
       color: COLORS.white,
