@@ -6,6 +6,7 @@ import {
   TextInput,
 } from "react-native";
 import { styles }  from "./style";
+import { COLORS } from "../../utils/Colors";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import Icon3 from "react-native-vector-icons/Feather";
@@ -20,7 +21,7 @@ const Profile = () => {
               style={styles.iconsNavigation}
               name="arrowleft"
               size={25}
-              color="#223843"
+              color= {COLORS.primary}
             />
           </View>
           <View style={styles.containerTitle}>
@@ -31,7 +32,7 @@ const Profile = () => {
               style={styles.iconsNavigation}
               name="settings-sharp"
               size={25}
-              color="#223843"
+              color={COLORS.primary}
             />
           </View>
         </View>
@@ -41,7 +42,7 @@ const Profile = () => {
             <Icon
               name="user"
               size={70}
-              color="#223843"
+              color={COLORS.primary}
               style={styles.photoUser}
             />
           </View>
@@ -78,7 +79,7 @@ const Profile = () => {
                   style={styles.iconLabel}
                   name="edit-2"
                   size={20}
-                  color="#223843"
+                  color={COLORS.primary}
                 />
                 <Text style={styles.textLabel}>HORÁRIOS DISPONIVEIS</Text>
               </View>
@@ -86,7 +87,7 @@ const Profile = () => {
               <View style={styles.viewInput}>
                 <TextInput
                   style={styles.input}
-                  placeholderTextColor="#0dab76"
+                  placeholderTextColor={COLORS.secondary}
                   placeholder="Segunda, de 10h às 11h30"
                   autoCorrect={false}
                 />

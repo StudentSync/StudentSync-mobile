@@ -10,6 +10,7 @@ import {
 import { SelectList } from "react-native-dropdown-select-list";
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+import { COLORS } from "../../utils/Colors";
 import Icon from "react-native-vector-icons/AntDesign";
 import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -29,7 +30,7 @@ const RegisterTeacher = () => {
 
   return (
     <LinearGradient
-      colors={["#0DAB76", "#223843"]}
+      colors={[COLORS.secondary, COLORS.primary]}
       locations={[0.3, 0.9]}
       style={styles.gradient}
     >
@@ -60,9 +61,9 @@ const RegisterTeacher = () => {
             dropdownStyles={styles.dropDown}
             dropdownTextStyles={styles.textDropDown}
             maxHeight= {70}
-            arrowicon={<MaterialIcon name="keyboard-arrow-down" size={26} color={"#eff1f3"} />} 
-            searchicon={<FontAwesome name="search" size={20} color={"#eff1f3"} />}
-            closeicon={<AntDesing name="close" size={22} color={"#eff1f3"}  />}
+            arrowicon={<MaterialIcon name="keyboard-arrow-down" size={26} color={COLORS.white} />} 
+            searchicon={<FontAwesome name="search" size={20} color={COLORS.white} />}
+            closeicon={<AntDesing name="close" size={22} color={COLORS.white}  />}
             setSelected={(val) => setSelected(val)}
             data={data}
             save="value"
@@ -78,7 +79,7 @@ const RegisterTeacher = () => {
               style={styles.iconContainer}
               name="arrowright"
               size={28}
-              color="#fff"
+              color={COLORS.white}
             />
           </TouchableOpacity>
 

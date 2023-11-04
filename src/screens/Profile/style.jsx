@@ -1,11 +1,12 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
     background: {
       flex: 1,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "#eff1f3",
+      backgroundColor: COLORS.white,
     },
     container: {
       flex: 1.5,
@@ -26,7 +27,7 @@ export const styles = StyleSheet.create({
       marginTop: 32,
     },
     title: {
-      color: "#223843",
+      color: COLORS.primary,
       fontFamily: "ligth",
       fontSize: 20,
       letterSpacing: 0,
@@ -43,7 +44,7 @@ export const styles = StyleSheet.create({
       justifyContent: "flex-start",
     },
     nameUser: {
-      color: "#223843",
+      color: COLORS.primary,
       fontFamily: "medium",
       fontSize: 23,
       marginBottom: 0,
@@ -53,7 +54,7 @@ export const styles = StyleSheet.create({
     },
     card: {
       flex: 4.5,
-      backgroundColor: "#223843",
+      backgroundColor: COLORS.primary,
       width: "112%",
       height: "100%",
       alignItems: "center",
@@ -69,13 +70,13 @@ export const styles = StyleSheet.create({
     officeCard: {
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "#f71735",
+      backgroundColor: COLORS.redTwo,
       borderRadius: 30,
       width: "100%",
       height: "35%",
     },
     officeUser: {
-      color: "#eff1f3",
+      color: COLORS.white,
       fontFamily: "medium",
       fontSize: 20,
     },
@@ -89,7 +90,7 @@ export const styles = StyleSheet.create({
       width: "70%",
     },
     courseText: {
-      color: "#eff1f3",
+      color: COLORS.white,
       fontFamily: "medium",
       fontSize: 18,
       textAlign: "center",
@@ -102,13 +103,13 @@ export const styles = StyleSheet.create({
     semesterCard: {
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#0dab76",
+      backgroundColor: COLORS.secondary,
       borderRadius: 30,
       width: "100%",
       height: "38%",
     },
     semesterText: {
-      color: "#eff1f3",
+      color: COLORS.white,
       fontFamily: "medium",
       fontSize: 18,
       textAlign: "center",
@@ -123,7 +124,7 @@ export const styles = StyleSheet.create({
     disponibilityCard: {
       justifyContent: "flex-start",
       alignItems: "center",
-      backgroundColor: "#eff1f3",
+      backgroundColor: COLORS.white,
       borderRadius: 30,
       width: "85%",
       height: "50%",
@@ -142,7 +143,7 @@ export const styles = StyleSheet.create({
       marginTop: 10,
       fontFamily: "light",
       fontSize: 14,
-      color: "#223843",
+      color: COLORS.primary,
     },
     iconLabel: {
       marginRight: "auto",
@@ -154,7 +155,7 @@ export const styles = StyleSheet.create({
       alignItems: "center",
       justifyContent: "center",
       marginBottom: 10,
-      color: "#223843",
+      color: COLORS.primary,
       fontFamily: "light",
       fontSize: 17,
     },

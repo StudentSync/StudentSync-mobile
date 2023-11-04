@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../utils/Colors";
 
 export const styles = StyleSheet.create({
     gradient: {
@@ -19,13 +20,13 @@ export const styles = StyleSheet.create({
       marginTop: 32,
     },
     title: {
-      color: "#223843",
+      color: COLORS.primary,
       fontFamily: "black",
       fontSize: 40,
       letterSpacing: -2,
     },
     subtitle: {
-      color: "#eff1f3",
+      color: COLORS.white,
       fontFamily: "light",
       fontSize: 15,
     },
@@ -40,7 +41,7 @@ export const styles = StyleSheet.create({
       marginTop: 8,
       fontFamily: "light",
       fontSize: 15,
-      color: "#eff1f3",
+      color: COLORS.white,
     },
     viewInputAbout: {
       flexDirection: "row",
@@ -48,20 +49,20 @@ export const styles = StyleSheet.create({
       justifyContent: "center",
       gap: 24,
       borderWidth: 1,
-      borderColor: "#eff1f3",
-      backgroundColor: "#eff1f3",
+      borderColor: COLORS.white,
+      backgroundColor: COLORS.white,
       borderRadius: 20,
       width: "90%",
       height: 120,
     },
     inputAbout: {
       marginTop: 18,
-      backgroundColor: "#eff1f3",
+      backgroundColor: COLORS.white,
       borderRadius: 20,
       marginBottom: 15,
       textAlign: "center",
       justifyContent: "center",
-      color: "#223843",
+      color: COLORS.primary,
       fontFamily: "light",
       fontSize: 14,
       height:"40%",
@@ -71,14 +72,14 @@ export const styles = StyleSheet.create({
       marginTop: 8,
       fontFamily: "thin",
       fontSize: 14,
-      color: "#eff1f3",
+      color: COLORS.white,
     },
     input: {
       marginTop: 18,
       justifyContent: "center",
       backgroundColor: "transparent",
       marginBottom: 15,
-      color: "#eff1f3",
+      color: COLORS.white,
       fontFamily: "light",
       fontSize: 17,
     },
@@ -95,7 +96,7 @@ export const styles = StyleSheet.create({
       marginRight: "auto",
       marginLeft: 80,
       backgroundColor: "transparent",
-      color: "#eff1f3",
+      color: COLORS.white,
       fontFamily: "thin",
       fontSize: 13,
     },
@@ -103,7 +104,7 @@ export const styles = StyleSheet.create({
       borderColor: "rgba(0,0,0,0.2)",
     },
     textDropDown: {
-      color:"#eff1f3",
+      color:COLORS.white,
       textAlign: "center",
       fontSize: 15,
       fontFamily: "thin",
@@ -116,7 +117,7 @@ export const styles = StyleSheet.create({
       height: 48,
       alignItems: "center",
       justifyContent: "center",
-      backgroundColor: "#223843",
+      backgroundColor: COLORS.primary,
       borderRadius: 20,
     },
     acess: {
@@ -124,7 +125,7 @@ export const styles = StyleSheet.create({
       marginLeft: 90,
       fontFamily: "black",
       fontSize: 24,
-      color: "#fff",
+      color: COLORS.white,
     },
 });
 
