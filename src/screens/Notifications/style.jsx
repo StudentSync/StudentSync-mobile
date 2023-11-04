@@ -53,11 +53,55 @@ export const styles = StyleSheet.create({
     },
     cardNotification: {
       backgroundColor: COLORS.secondary,
-      alignItems: "flex-start",
+      alignItems: "center",
       justifyContent: "flex-start",
       width: "100%",
       height: "32%",
       borderRadius: 20,
-      
+    },
+    nameOrganizer: {
+      textAlign: "center",
+      marginTop: 25,
+      fontFamily: "medium",
+      fontSize: 18,
+      color: COLORS.white
+    },
+    containerInvitation:{
+      width: "80%",
+    },
+    textNotification: {
+      textAlign: "center",
+      marginTop: 15,
+      fontFamily: "light",
+      fontSize: 17,
+      color: COLORS.white
+    },
+    containerAnswer: {
+      flex: 1,
+      flexDirection: "row",
+      justifyContent: "space-between",
+      marginTop: 25,
+      marginRight:10,
+      marginLeft:10,
+    },
+    button: {
+      backgroundColor: COLORS.white,
+      width: "38%",
+      height:"44%",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: 20,
+    },
+    textReject: {
+      textAlign: "center",
+      fontFamily: "light",
+      fontSize: 16,
+      color: COLORS.redTwo
+    },
+    textAccept: {
+      textAlign: "center",
+      fontFamily: "light",
+      fontSize: 16,
+      color: COLORS.secondary
     },
 });
