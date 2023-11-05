@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   View,
   TouchableOpacity,
-  TextInput,
   Text,
   KeyboardAvoidingView,
 } from "react-native";
@@ -20,12 +19,26 @@ const RegisterStudent = () => {
   const navigation = useNavigation();
   const route = useRoute();
 
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  const [selectedSemester, setSelectedSemester] = useState(null);
+
   const name = route.params?.name || "";
 
   const data = [
-    { key: "1", value: "Mestrado" },
-    { key: "2", value: "Doutorado" },
-    { key: "3", value: "Pós-doutorado" },
+    { key: "1", value: "Análise e Desenvolvimento de Sistemas" },
+    { key: "2", value: "Ciência de Dados" },
+    { key: "3", value: "Segurança da Informação" },
+  ];
+
+  const semester = [
+    { key: "1", value: "Semestre 1" },
+    { key: "2", value: "Semestre 2" },
+    { key: "3", value: "Semestre 3" },
+    { key: "4", value: "Semestre 4" },
+    { key: "5", value: "Semestre 5" },
+    { key: "6", value: "Semestre 6" },
+    { key: "7", value: "Semestre 7" },
+    { key: "8", value: "Semestre 8" },
   ];
 
   return (
@@ -36,7 +49,7 @@ const RegisterStudent = () => {
     >
       <KeyboardAvoidingView style={styles.main}>
         <View style={styles.containerTitle}>
-          <Text style={styles.title}>Eai {name}!</Text>
+          <Text style={styles.title}>E aí {name}!</Text>
           <Text style={styles.subtitle}>
             Adicione mais informações para continuar.
           </Text>
@@ -45,39 +58,12 @@ const RegisterStudent = () => {
         <View style={styles.container}>
           <Text style={styles.label}>QUAL SEU CURSO?</Text>
           <SelectList
+            style={styles.selectStyle}
             boxStyles={styles.labelSelect}
             inputStyles={styles.textSelect}
             dropdownStyles={styles.dropDown}
             dropdownTextStyles={styles.textDropDown}
-            maxHeight={70}
-            arrowicon={
-              <MaterialIcon
-                name="keyboard-arrow-down"
-                size={26}
-                color={COLORS.white}
-              />
-            }
-            searchicon={
-              <FontAwesome name="search" size={20} color={COLORS.white} />
-            }
-            closeicon={
-              <AntDesing name="close" size={22} color={COLORS.white} />
-            }
-            setSelected={(val) => setSelected(val)}
-            data={data}
-            save="value"
-            placeholderTextColor="#aaa"
-            placeholder="clique para selecionar"
-            searchPlaceholder="Procure o grau"
-          ></SelectList>
-
-          <Text style={styles.label}>SELECIONE O SEMESTRE</Text>
-          <SelectList
-            boxStyles={styles.labelSelect}
-            inputStyles={styles.textSelect}
-            dropdownStyles={styles.dropDown}
-            dropdownTextStyles={styles.textDropDown}
-            maxHeight={70}
+            maxHeight={110}
             arrowicon={
               <MaterialIcon
                 name="keyboard-arrow-down"
@@ -91,10 +77,38 @@ const RegisterStudent = () => {
             closeicon={
               <AntDesing name="close" size={22} color={COLORS.secondary} />
             }
-            setSelected={(val) => setSelected(val)}
+            setSelected={(val) => setSelectedSemester(val)}
             data={data}
             save="value"
-            placeholderTextColor="#aaa"
+            placeholderTextColor={COLORS.white}
+            placeholder="clique para selecionar"
+            searchPlaceholder="Procure o grau"
+          ></SelectList>
+
+          <Text style={styles.label}>SELECIONE O SEMESTRE</Text>
+          <SelectList
+            boxStyles={styles.labelSelect}
+            inputStyles={styles.textSelect}
+            dropdownStyles={styles.dropDown}
+            dropdownTextStyles={styles.textDropDown}
+            maxHeight={110}
+            arrowicon={
+              <MaterialIcon
+                name="keyboard-arrow-down"
+                size={26}
+                color={COLORS.white}
+              />
+            }
+            searchicon={
+              <FontAwesome name="search" size={20} color={COLORS.secondary} />
+            }
+            closeicon={
+              <AntDesing name="close" size={22} color={COLORS.secondary} />
+            }
+            setSelected={(val) => setSelectedSemester(val)}
+            data={semester}
+            save="value"
+            placeholderTextColor={COLORS.white}
             placeholder="clique para selecionar"
             searchPlaceholder="Procure o grau"
           ></SelectList>

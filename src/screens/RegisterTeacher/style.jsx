@@ -96,7 +96,7 @@ export const styles = StyleSheet.create({
     },
     textSelect: {
       marginRight: "auto",
-      marginLeft: 80,
+      marginLeft: "auto",
       backgroundColor: "transparent",
       color: COLORS.white,
       fontFamily: "thin",

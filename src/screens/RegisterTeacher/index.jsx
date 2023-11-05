@@ -21,6 +21,8 @@ const RegisterTeacher = () => {
   const navigation = useNavigation();
   const route = useRoute();
 
+  const [selectedDegree, setSelectedDegree] = useState(null);
+
   const name = route.params?.name || '';
 
   const data = [
@@ -44,7 +46,7 @@ const RegisterTeacher = () => {
 
         <View style={styles.container}>
 
-          <Text style={styles.labelAbout}>Conte sobre sua titulação</Text>
+          <Text style={styles.labelAbout}>Conte-nos sobre sua titulação</Text>
           <View style={styles.viewInputAbout}>
             <TextInput
               style={styles.inputAbout}
@@ -65,7 +67,7 @@ const RegisterTeacher = () => {
             arrowicon={<MaterialIcon name="keyboard-arrow-down" size={26} color={COLORS.secondary} />} 
             searchicon={<FontAwesome name="search" size={20} color={COLORS.secondary} />}
             closeicon={<AntDesing name="close" size={22} color={COLORS.secondary}  />}
-            setSelected={(val) => setSelected(val)}
+            setSelected={(val) => setSelectedDegree(val)}
             data={data}
             save="value"
             placeholderTextColor="#aaa"
