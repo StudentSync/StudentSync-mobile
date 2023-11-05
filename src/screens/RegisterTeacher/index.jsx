@@ -15,8 +15,6 @@ import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import AntDesing from "react-native-vector-icons/AntDesign";
 import { styles } from "./style";
-import { COLORS } from "../../utils/Colors";
-
 
 const RegisterTeacher = () => {
   const navigation = useNavigation();
