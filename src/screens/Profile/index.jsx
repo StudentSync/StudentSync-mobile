@@ -4,14 +4,22 @@ import {
   KeyboardAvoidingView,
   Text,
   TextInput,
+  TouchableOpacity,
 } from "react-native";
 import { styles }  from "./style";
 import { COLORS } from "../../utils/Colors";
+import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import Icon3 from "react-native-vector-icons/Feather";
 
 const Profile = () => {
+  const navigation = useNavigation();
+
+    const Configuration = () => {
+      navigation.navigate("Configuration");
+    };
+
   return (
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.container}>
@@ -27,14 +35,15 @@ const Profile = () => {
           <View style={styles.containerTitle}>
             <Text style={styles.title}>Perfil</Text>
           </View>
-          <View>
+          <TouchableOpacity onPress={Configuration}>
             <Icon2
               style={styles.iconsNavigation}
               name="settings-sharp"
               size={25}
               color={COLORS.primary}
             />
-          </View>
+          </TouchableOpacity>
+          
         </View>
 
         <View style={styles.containerUser}>

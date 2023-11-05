@@ -8,6 +8,8 @@ import Register from './src/screens/Register';
 import Office from './src/screens/Office';
 import RegisterTeacher from './src/screens/RegisterTeacher';
 import RegisterStudent from './src/screens/RegisterStudent';
+import Configuration from './src/screens/Configuration';
+import Profile from './src/screens/Profile';
 
 const Stack = createNativeStackNavigator();
 
@@ -45,6 +47,8 @@ export default function App() {
         <Stack.Screen name="Office" component={Office} options={{ headerShown: false }}/>
         <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} options={{ headerShown: false }}/>
         <Stack.Screen name="RegisterStudent" component={RegisterStudent} options={{ headerShown: false }}/>
+        <Stack.Screen name="Configuration" component={Configuration} options={{ headerShown: false }}/>
+        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
