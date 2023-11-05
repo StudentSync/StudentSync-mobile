@@ -30,13 +30,13 @@ export const styles = StyleSheet.create({
       color: COLORS.primary,
       fontFamily: "ligth",
       fontSize: 20,
-      letterSpacing: 0,
+      letterSpacing: 1,
     },
     iconsNavigation: {
       flex: 1,
       alignItems: "center",
       justifyContent: "space-between",
-      marginTop: 25,
+      marginTop: 30,
     },
     containerUser: {
       flex: 1.5,
@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
     officeContainer: {
       flex: 1,
       justifyContent: "flex-start",
-      marginTop: 25,
+      marginTop: 30,
       width: "30%",
     },
     officeCard: {
@@ -73,12 +73,12 @@ export const styles = StyleSheet.create({
       backgroundColor: COLORS.redTwo,
       borderRadius: 30,
       width: "100%",
-      height: "35%",
+      height: "40%",
     },
     officeUser: {
       color: COLORS.white,
-      fontFamily: "medium",
-      fontSize: 20,
+      fontFamily: "light",
+      fontSize: 18,
     },
     courseContainer: {
       flex: 1,
@@ -91,8 +91,8 @@ export const styles = StyleSheet.create({
     },
     courseText: {
       color: COLORS.white,
-      fontFamily: "medium",
-      fontSize: 18,
+      fontFamily: "light",
+      fontSize: 20,
       textAlign: "center",
     },
     semesterContainer: {
@@ -106,11 +106,11 @@ export const styles = StyleSheet.create({
       backgroundColor: COLORS.secondary,
       borderRadius: 30,
       width: "100%",
-      height: "38%",
+      height: "40%",
     },
     semesterText: {
       color: COLORS.white,
-      fontFamily: "medium",
+      fontFamily: "light",
       fontSize: 18,
       textAlign: "center",
     },
