@@ -17,8 +17,12 @@ const Office = () => {
 
   const name = route.params?.name || '';
 
-  const RegisterTeacher = () => {
-    navigation.navigate("RegisterTeacher");
+  const registerTeacher = () => {
+    navigation.navigate("RegisterTeacher", { name });
+  };
+
+  const registerStudent = () => {
+    navigation.navigate("RegisterStudent", { name });
   };
 
   return (
@@ -29,13 +33,13 @@ const Office = () => {
     >
       <KeyboardAvoidingView style={styles.background}>
         <View style={styles.containerLogo}>
-          <Text style={styles.title}>Olá {name}!</Text>
+          <Text style={styles.title}>Bem Vindo, {name}!</Text>
           <Text style={styles.subTitle}>Selecione um para continuar</Text>
           <Text style={styles.textSelection}>Você é:</Text>
         </View>
 
         <View style={styles.navBar}>
-          <TouchableOpacity style={styles.navItem} >
+          <TouchableOpacity style={styles.navItem} onPress={registerStudent}>
           <Icons
               style={styles.emailIcon}
               name="user-graduate"
@@ -45,7 +49,7 @@ const Office = () => {
             <Text style={styles.navText}>Estudante</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.navItem} onPress={RegisterTeacher}>
+          <TouchableOpacity style={styles.navItem} onPress={registerTeacher}>
           <Icons
               style={styles.emailIcon}
               name="user-tie"

@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
       width: "100%",
     },
     containerTitle: {
-      flex:1,
+      flex:1.2,
       justifyContent: "center",
       alignItems: "center",
       marginTop: 32,
@@ -33,14 +33,12 @@ export const styles = StyleSheet.create({
       fontSize: 15,
     },
     container: {
-      flex: 3.2,
+      flex: 3,
       alignItems: "center",
       width: "90%",
-      gap: 5,
+      gap: -30,
     },
     labelAbout: {
-      marginLeft: 0,
-      marginTop: 8,
       fontFamily: "light",
       fontSize: 15,
       color: COLORS.white,
@@ -67,17 +65,16 @@ export const styles = StyleSheet.create({
       color: COLORS.primary,
       fontFamily: "light",
       fontSize: 14,
-      height:"40%",
+      height:"10%",
       width: "90%",
     },
     label: {
-      marginTop: 8,
+      marginBottom: 36,
       fontFamily: "thin",
       fontSize: 14,
       color: COLORS.white,
     },
     input: {
-      marginTop: 18,
       justifyContent: "center",
       backgroundColor: "transparent",
       marginBottom: 15,
@@ -88,28 +85,29 @@ export const styles = StyleSheet.create({
     labelSelect: {
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "rgba(0,0,0,0.2)",
+      backgroundColor: "rgba(0,0,0,0.1)",
       borderColor: "transparent",
       borderRadius: 20,
       width: "90%",
-      height: "30%",
+      height: "32%",
     },
     textSelect: {
       marginRight: "auto",
-      marginLeft: "auto",
       backgroundColor: "transparent",
       color: COLORS.white,
       fontFamily: "thin",
       fontSize: 13,
+      marginLeft: "auto",
     },
     dropDown: {
-      borderColor: "rgba(0,0,0,0.2)",
+      borderColor: "rgba(255,255,255,0.2)",
     },
     textDropDown: {
       color:COLORS.white,
       textAlign: "center",
       fontSize: 15,
       fontFamily: "thin",
+      marginBottom: 12,
     },
     acessButton: {
       flexDirection: "row",
@@ -128,7 +126,7 @@ export const styles = StyleSheet.create({
       fontFamily: "black",
       fontSize: 24,
       color: COLORS.white,
-    },
+    },   
 });
 
 export default styles;
