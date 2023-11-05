@@ -37,8 +37,6 @@ const RegisterStudent = () => {
     { key: "4", value: "Semestre 4" },
     { key: "5", value: "Semestre 5" },
     { key: "6", value: "Semestre 6" },
-    { key: "7", value: "Semestre 7" },
-    { key: "8", value: "Semestre 8" },
   ];
 
   return (
