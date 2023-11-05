@@ -9,6 +9,7 @@ import {
 import { SelectList } from "react-native-dropdown-select-list";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
+import { COLORS } from "../../utils/Colors";
 import Icon from "react-native-vector-icons/AntDesign";
 import MaterialIcon from "react-native-vector-icons/MaterialIcons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -33,7 +34,7 @@ const RegisterTeacher = () => {
 
   return (
     <LinearGradient
-      colors={["#0DAB76", "#223843"]}
+      colors={[COLORS.secondary, COLORS.primary]}
       locations={[0.3, 0.9]}
       style={styles.gradient}
     >

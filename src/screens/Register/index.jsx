@@ -126,7 +126,7 @@ const Register = () => {
               style={styles.iconContainer}
               name="arrowright"
               size={28}
-              color="#fff"
+              color={COLORS.white}
             />
           </TouchableOpacity>
 
