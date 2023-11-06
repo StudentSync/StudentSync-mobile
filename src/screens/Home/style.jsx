@@ -4,12 +4,28 @@ import { COLORS } from "../../utils/Colors";
 export const styles = StyleSheet.create({
   main: {
     flex: 1,
-    alignItems: "center",
     justifyContent: "center",
     backgroundColor: COLORS.primary,
   },
+  add: {
+    marginTop: 64,
+    left: '80%',
+  },
+  monthView: {
+    marginTop: 24,
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 24,
+    gap: 24,
+  },
+  month: {
+    fontFamily: "light",
+    fontSize: 18,
+    color: COLORS.white,
+    marginTop: 8,
+  },
   scheduleContainer: {
-    flex: 0.65,
+    flex: 0.8,
     width: "100%",
     alignItems: "center",
     marginTop: "auto",
@@ -40,7 +56,7 @@ export const styles = StyleSheet.create({
   card: {
     flexDirection: "row",
     width: "85%",
-    height: "24%",
+    height: "28%",
     borderRadius: 24,
     backgroundColor: "#d8d8d8",
   },
@@ -54,6 +70,32 @@ export const styles = StyleSheet.create({
   },
   startTime: {
     fontFamily: "medium",
+    fontSize: 24,
     color: COLORS.white,
+  },
+  endTime: {
+    color: COLORS.white,
+  },
+  titleCard: {
+    alignItems: "center",
+    marginRight: "auto",
+    marginTop: 24,
+  },
+  title: {
+    fontFamily: "medium",
+    color: COLORS.primary,
+    fontSize: 18,
+  },
+  information: {
+    marginTop: 12,
+    gap: 5,
+  },
+  room: {
+    color: COLORS.secondary,
+    fontFamily: "medium",
+  },
+  organizer: {
+    color: COLORS.secondary,
+    fontFamily: "medium",
   },
 });

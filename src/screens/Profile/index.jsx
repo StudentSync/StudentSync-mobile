@@ -56,7 +56,7 @@ const Profile = () => {
             />
           </View>
           <View>
-            <Text style={styles.nameUser}>Hivna Castro</Text>
+            <Text style={styles.nameUser}>Aluno</Text>
           </View>
         </View>
 
@@ -84,12 +84,6 @@ const Profile = () => {
           <View style={styles.disponibilityContainer}>
             <View style={styles.disponibilityCard}>
               <View style={styles.label}>
-                <Icon3
-                  style={styles.iconLabel}
-                  name="edit-2"
-                  size={20}
-                  color={COLORS.primary}
-                />
                 <Text style={styles.textLabel}>HORÁRIOS DISPONIVEIS</Text>
               </View>
 
