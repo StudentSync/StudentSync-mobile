@@ -59,7 +59,8 @@ export const styles = StyleSheet.create({
       height: "100%",
       alignItems: "center",
       justifyContent: "center",
-      borderRadius: 42,
+      borderTopLeftRadius: 42,
+      borderTopRightRadius: 42,
     },
     officeContainer: {
       flex: 1,
