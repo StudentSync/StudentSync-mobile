@@ -10,9 +10,13 @@ import { COLORS } from "../../utils/Colors";
 const Login = () => {
   const navigation = useNavigation();
 
-  const Register = () => {
+  const register = () => {
     navigation.navigate("Register");
   };
+
+  const main = () => {
+    navigation.navigate("Main")
+  }
 
   return (
     <KeyboardAvoidingView style={styles.background}>
@@ -58,7 +62,7 @@ const Login = () => {
           />
         </View>
 
-        <TouchableOpacity style={styles.acessButton}>
+        <TouchableOpacity style={styles.acessButton} onPress={main}>
           <Text style={styles.acess}>Continuar</Text>
           <Icon
             style={styles.iconContainer}
@@ -68,7 +72,7 @@ const Login = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.registerButton} onPress={Register}>
+        <TouchableOpacity style={styles.registerButton} onPress={register}>
           <Text style={styles.register}>Não possui conta? Crie aqui</Text>
         </TouchableOpacity>
 
