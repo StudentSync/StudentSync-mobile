@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
-import Profile from "../screens/Profile";
+import ProfileStudent from "../screens/ProfileStudent";
 import Notifications from "../screens/Notifications";
 import HomeIcon from "react-native-vector-icons/Octicons"
 import NotificationIcon from "react-native-vector-icons/Ionicons"
@@ -33,8 +33,8 @@ function Main() {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="ProfileStudent"
+        component={ProfileStudent}
         options={{
           tabBarIcon: ({ color, size }) => (
             <ProfileIcon name="user" color={COLORS.primary} size={24} /> // Ícone para a tela "Profile"

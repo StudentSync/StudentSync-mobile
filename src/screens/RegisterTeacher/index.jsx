@@ -27,7 +27,6 @@ const RegisterTeacher = () => {
   const data = [
    {key: "1", value: "Mestrado"},
    {key: "2", value: "Doutorado"},
-   {key: "3", value: "Pós-doutorado"},
   ];
 
   return (
