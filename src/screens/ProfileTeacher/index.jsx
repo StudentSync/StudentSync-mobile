@@ -16,9 +16,9 @@ import Icon3 from "react-native-vector-icons/Feather";
 const ProfileTeacher = () => {
   const navigation = useNavigation();
 
-    const Configuration = () => {
-      navigation.navigate("Configuration");
-    };
+  const configuration = () => {
+    navigation.navigate("Configuration");
+  };
 
   return (
     <KeyboardAvoidingView style={styles.background}>
@@ -35,7 +35,7 @@ const ProfileTeacher = () => {
           <View style={styles.containerTitle}>
             <Text style={styles.title}>Perfil</Text>
           </View>
-          <TouchableOpacity onPress={Configuration}>
+          <TouchableOpacity onPress={configuration}>
             <Icon2
               style={styles.iconsNavigation}
               name="settings-sharp"
@@ -67,14 +67,16 @@ const ProfileTeacher = () => {
             </View>
           </View>
 
-          <View style={styles.semesterContainer}>
+          <View style={styles.degreeContainer}>
+            <View style={styles.degreeCard}>
               <Text style={styles.semesterText}>Doutorado</Text>
+            </View>
           </View>
           
-          <View style={styles.courseContainer}>
-            <View style={styles.courseCard}>
-              <Text style={styles.courseText}>
-                Análise e Desenvolvimento de Sistemas
+          <View style={styles.statusContainer}>
+            <View style={styles.statusCard}>
+              <Text style={styles.statusText}>
+                Coordenador do curso de Análise e Desenvolvimento de Sistemas
               </Text>
             </View>
           </View>

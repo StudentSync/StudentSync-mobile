@@ -20,9 +20,13 @@ const RegisterTeacher = () => {
   const navigation = useNavigation();
   const route = useRoute();
 
-  const [selectedDegree, setSelectedDegree] = useState(null);
-
   const name = route.params?.name || '';
+
+  const profileTeacher = () => {
+    navigation.navigate("ProfileTeacher")
+  };
+
+  const [selectedDegree, setSelectedDegree] = useState(null);
 
   const data = [
    {key: "1", value: "Mestrado"},
@@ -74,7 +78,7 @@ const RegisterTeacher = () => {
             >
           </SelectList>
 
-          <TouchableOpacity style={styles.acessButton} >
+          <TouchableOpacity style={styles.acessButton} onPress={profileTeacher}>
             <Text style={styles.acess}>Continuar</Text>
             <Icon
               style={styles.iconContainer}

@@ -14,6 +14,7 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import AntDesing from "react-native-vector-icons/AntDesign";
 import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
+import ProfileStudent from "../ProfileStudent";
 
 const RegisterStudent = () => {
   const navigation = useNavigation();
@@ -23,6 +24,10 @@ const RegisterStudent = () => {
   const [selectedSemester, setSelectedSemester] = useState(null);
 
   const name = route.params?.name || "";
+
+  const profileStudent = () => {
+    navigation.navigate("ProfileStudent");
+  };
 
   const data = [
     { key: "1", value: "Análise e Desenvolvimento de Sistemas" },
@@ -111,7 +116,7 @@ const RegisterStudent = () => {
             searchPlaceholder="Procure o grau"
           ></SelectList>
 
-          <TouchableOpacity style={styles.acessButton}>
+          <TouchableOpacity style={styles.acessButton} onPress={profileStudent}>
             <Text style={styles.acess}>Continuar</Text>
             <Icon
               style={styles.iconContainer}
