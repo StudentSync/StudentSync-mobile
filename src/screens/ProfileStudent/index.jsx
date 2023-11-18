@@ -8,17 +8,20 @@ import {
 } from "react-native";
 import { styles }  from "./style";
 import { COLORS } from "../../utils/Colors";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import Icon3 from "react-native-vector-icons/Feather";
 
 const ProfileStudent = () => {
   const navigation = useNavigation();
+  const route = useRoute();
 
-    const Configuration = () => {
-      navigation.navigate("Configuration");
-    };
+  const Configuration = () => {
+    navigation.navigate("Configuration");
+  };
+
+  const name = route.params?.name || "";
 
   return (
     <KeyboardAvoidingView style={styles.background}>
@@ -56,7 +59,7 @@ const ProfileStudent = () => {
             />
           </View>
           <View>
-            <Text style={styles.nameUser}>Aluno</Text>
+            <Text style={styles.nameUser}> { name } </Text>
           </View>
         </View>
 

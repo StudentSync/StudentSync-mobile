@@ -21,9 +21,12 @@ const RegisterTeacher = () => {
   const route = useRoute();
 
   const name = route.params?.name || '';
+  
+  const partsName = name.split(" ");
+  const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileTeacher = () => {
-    navigation.navigate("ProfileTeacher")
+    navigation.navigate("ProfileTeacher", { name })
   };
 
   const [selectedDegree, setSelectedDegree] = useState(null);
@@ -42,7 +45,7 @@ const RegisterTeacher = () => {
       <KeyboardAvoidingView style={styles.main}>
 
         <View style={styles.containerTitle}>
-          <Text style ={styles.title}>Olá, Prof {name}</Text>
+          <Text style ={styles.title}>Olá, Prof { firstName }</Text>
           <Text style = {styles.subtitle}>Adicione mais informações para continuar.</Text>
         </View>
 

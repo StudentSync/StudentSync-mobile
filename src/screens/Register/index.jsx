@@ -29,11 +29,10 @@ const Register = () => {
     const fullName = name;
     const partsName = fullName.split(" ");
     const firstName = partsName.length > 0 ? partsName[0] : "";
-    navigation.navigate("Office", { name: firstName });
+    navigation.navigate("Office", { name: fullName });
   };
 
   const [isChecked, setChecked] = useState(false);
-
 
   const updateName = (text) => {
     setName(text);

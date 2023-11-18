@@ -24,9 +24,11 @@ const RegisterStudent = () => {
   const [selectedSemester, setSelectedSemester] = useState(null);
 
   const name = route.params?.name || "";
+  const partsName = name.split(" ");
+  const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileStudent = () => {
-    navigation.navigate("ProfileStudent");
+    navigation.navigate("ProfileStudent", {name});
   };
 
   const data = [
@@ -52,7 +54,7 @@ const RegisterStudent = () => {
     >
       <KeyboardAvoidingView style={styles.main}>
         <View style={styles.containerTitle}>
-          <Text style={styles.title}>E aí {name}!</Text>
+          <Text style={styles.title}>E aí { firstName }!</Text>
           <Text style={styles.subtitle}>
             Adicione mais informações para continuar.
           </Text>

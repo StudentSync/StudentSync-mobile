@@ -17,6 +17,9 @@ const Office = () => {
 
   const name = route.params?.name || '';
 
+  const partsName = name.split(" ");
+  const firstName = partsName.length > 0 ? partsName[0] : ""
+
   const registerTeacher = () => {
     navigation.navigate("RegisterTeacher", { name });
   };
@@ -33,7 +36,7 @@ const Office = () => {
     >
       <KeyboardAvoidingView style={styles.background}>
         <View style={styles.containerLogo}>
-          <Text style={styles.title}>Bem Vindo, {name}!</Text>
+          <Text style={styles.title}>Bem Vindo, {firstName}!</Text>
           <Text style={styles.subTitle}>Selecione um para continuar</Text>
           <Text style={styles.textSelection}>Você é:</Text>
         </View>
