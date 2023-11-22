@@ -19,6 +19,8 @@ const ProfileTeacher = () => {
 
   const name = route.params?.name || '';
 
+  const selectedDegree = route.params?.selectedDegree || null;
+
   const configuration = () => {
     navigation.navigate("Configuration");
   };
@@ -72,7 +74,7 @@ const ProfileTeacher = () => {
 
           <View style={styles.degreeContainer}>
             <View style={styles.degreeCard}>
-              <Text style={styles.semesterText}>Doutorado</Text>
+              <Text style={styles.semesterText}> { selectedDegree }</Text>
             </View>
           </View>
           
