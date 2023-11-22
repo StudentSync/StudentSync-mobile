@@ -11,14 +11,13 @@ import { COLORS } from "../../utils/Colors";
 import { useNavigation, useRoute} from "@react-navigation/native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
-import Icon3 from "react-native-vector-icons/Feather";
 
 const ProfileTeacher = () => {
   const navigation = useNavigation();
   const route = useRoute();
 
   const name = route.params?.name || '';
-
+  const about = route.params?.about || '';
   const selectedDegree = route.params?.selectedDegree || null;
 
   const configuration = () => {
@@ -81,7 +80,7 @@ const ProfileTeacher = () => {
           <View style={styles.statusContainer}>
             <View style={styles.statusCard}>
               <Text style={styles.statusText}>
-                Coordenador do curso de Análise e Desenvolvimento de Sistemas
+                { about }
               </Text>
             </View>
           </View>
@@ -96,7 +95,7 @@ const ProfileTeacher = () => {
               <View style={styles.viewInput}>
                 <TextInput
                   style={styles.input}
-                  placeholderTextColor={COLORS.secondary}
+                  placeholderTextColor="#aaa"
                   placeholder="Segunda, de 10h às 11h30"
                   autoCorrect={false}
                 />
