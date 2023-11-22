@@ -81,27 +81,27 @@ export const styles = StyleSheet.create({
       fontFamily: "light",
       fontSize: 18,
     },
-    courseContainer: {
+    statusContainer: {
       flex: 1,
       justifyContent: "flex-start",
     },
-    courseCard: {
+    statusCard: {
       flex: 1,
       justifyContent: "flex-start",
       width: "70%",
     },
-    courseText: {
+    statusText: {
       color: COLORS.white,
       fontFamily: "light",
-      fontSize: 20,
+      fontSize: 16,
       textAlign: "center",
     },
-    semesterContainer: {
+    degreeContainer: {
       flex: 1,
       justifyContent: "flex-start",
-      width: "33%",
+      width: "30%",
     },
-    semesterCard: {
+    degreeCard: {
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: COLORS.secondary,
@@ -112,7 +112,7 @@ export const styles = StyleSheet.create({
     semesterText: {
       color: COLORS.white,
       fontFamily: "light",
-      fontSize: 18,
+      fontSize: 16,
       textAlign: "center",
     },
     disponibilityContainer: {

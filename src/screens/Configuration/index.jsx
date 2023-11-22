@@ -20,15 +20,15 @@ const Configuration = () => {
       navigation.navigate("Login");
     };
 
-    const Profile = () => {
-        navigation.navigate("Profile")
+    const profileTeacher = () => {
+        navigation.navigate("ProfileTeacher")
     };
 
   return (
     <KeyboardAvoidingView style={styles.background}>
       
         <View style={styles.containerNavigation}>
-            <TouchableOpacity onPress={Profile}>
+            <TouchableOpacity onPress={profileTeacher}>
                 <Icon
                     style={styles.iconsNavigation}
                     name="arrowleft"

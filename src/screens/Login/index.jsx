@@ -15,8 +15,8 @@ const Login = () => {
   };
 
   const main = () => {
-    navigation.navigate("Main")
-  }
+    navigation.navigate("Main");
+  };
 
   return (
     <KeyboardAvoidingView style={styles.background}>
