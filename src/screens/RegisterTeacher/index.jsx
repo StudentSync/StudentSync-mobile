@@ -26,7 +26,7 @@ const RegisterTeacher = () => {
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileTeacher = () => {
-    navigation.navigate("ProfileTeacher", { name })
+    navigation.navigate("ProfileTeacher", { name, selectedDegree, about })
   };
 
   const [selectedDegree, setSelectedDegree] = useState(null);
@@ -35,6 +35,12 @@ const RegisterTeacher = () => {
    {key: "1", value: "Mestrado"},
    {key: "2", value: "Doutorado"},
   ];
+
+  const [about, setAbout] = useState("");
+
+  const updateAbout = (text) => {
+    setAbout(text);
+  };
 
   return (
     <LinearGradient
@@ -58,7 +64,8 @@ const RegisterTeacher = () => {
               placeholderTextColor="#aaa"
               placeholder="Adicione uma descrição de suas titulações"
               autoCorrect={false}
-              onChangeText={() => {}}
+              value={about}
+              onChangeText={updateAbout}
             />
           </View>
 

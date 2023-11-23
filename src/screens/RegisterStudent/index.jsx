@@ -28,7 +28,7 @@ const RegisterStudent = () => {
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileStudent = () => {
-    navigation.navigate("ProfileStudent", {name});
+    navigation.navigate("ProfileStudent", {name, selectedCourse, selectedSemester});
   };
 
   const data = [
@@ -82,7 +82,7 @@ const RegisterStudent = () => {
             closeicon={
               <AntDesing name="close" size={22} color={COLORS.secondary} />
             }
-            setSelected={(val) => setSelectedSemester(val)}
+            setSelected={(val) => setSelectedCourse(val)}
             data={data}
             save="value"
             placeholderTextColor={COLORS.white}

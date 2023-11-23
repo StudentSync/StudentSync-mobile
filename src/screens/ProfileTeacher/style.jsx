@@ -125,8 +125,7 @@ export const styles = StyleSheet.create({
     disponibilityCard: {
       justifyContent: "flex-start",
       alignItems: "center",
-      textAlign: "center",
-      
+      textAlign: "center",  
       backgroundColor: COLORS.white,
       borderRadius: 30,
       width: "85%",
@@ -160,7 +159,7 @@ export const styles = StyleSheet.create({
       alignItems: "center",
       justifyContent: "center",
       marginBottom: 10,
-      color: COLORS.primary,
+      color: COLORS.secondary,
       fontFamily: "light",
       fontSize: 17,
     },

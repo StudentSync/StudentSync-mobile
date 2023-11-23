@@ -160,7 +160,7 @@ export const styles = StyleSheet.create({
       alignItems: "center",
       justifyContent: "center",
       marginBottom: 10,
-      color: COLORS.primary,
+      color: COLORS.secondary,
       fontFamily: "light",
       fontSize: 17,
     },
