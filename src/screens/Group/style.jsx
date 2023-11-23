@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
       backgroundColor: COLORS.white,
     },
     container: {
-      flex: 1.5,
+      flex: 1,
       alignItems: "center",
       width: "90%",
       gap: 5,
@@ -18,14 +18,19 @@ export const styles = StyleSheet.create({
       flex: 1,
       flexDirection: "row",
       justifyContent: "space-between",
-      marginTop: 32,
-      marginLeft: 10,
+      alignItems: "flex-end",
+      
+      backgroundColor: COLORS.secondary
+    },
+    positionAddIcon: {
+      flex: 1,
+      flexDirection: "row",
+      width: "50%"
     },
     containerTitle: {
       flex: 1,
       justifyContent: "space-between",
-      marginTop: 4,
-      marginLeft: 12,
+      alignItems: "flex-start",
     },
     title: {
       color: COLORS.primary,
@@ -36,10 +41,9 @@ export const styles = StyleSheet.create({
       flex: 1,
       alignItems: "center",
       justifyContent: "space-between",
-      marginTop: 25,
     },
     containerGroup:{
-      flex: 10,
+      flex: 1,
       alignItems: "center",
       justifyContent: "space-around",
       width: "90%",
