@@ -22,6 +22,10 @@ const ProfileStudent = () => {
   };
 
   const name = route.params?.name || "";
+  const selectedCourse = route.params?.selectedCourse || null;
+  const selectedSemester = route.params?.selectedSemester || null;
+
+
 
   return (
     <KeyboardAvoidingView style={styles.background}>
@@ -73,14 +77,14 @@ const ProfileStudent = () => {
           <View style={styles.courseContainer}>
             <View style={styles.courseCard}>
               <Text style={styles.courseText}>
-                Análise e Desenvolvimento de Sistemas
+                { selectedCourse }
               </Text>
             </View>
           </View>
 
           <View style={styles.semesterContainer}>
             <View style={styles.semesterCard}>
-              <Text style={styles.semesterText}>2º semestre</Text>
+              <Text style={styles.semesterText}> { selectedSemester }</Text>
             </View>
           </View>
 
