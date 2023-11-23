@@ -6,7 +6,6 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import { styles }  from "./style";
@@ -16,52 +15,47 @@ import { COLORS } from "../../utils/Colors";
 const Group = () => {
 
   
-
  
   return (
       <KeyboardAvoidingView style={styles.background}>
         <View style={styles.container}>
 
           <View style={styles.containerNavigation}>
-            <View>
+
+            <View style={styles.containerNavigation}>
               <Icon
                   name="addusergroup"
                   size={24}
-                  color={COLORS.white}
+                  color={COLORS.primary}
                   style={styles.iconGroup}
                 />
             </View>
             <View style={styles.containerTitle}>
               <Text style={styles.title}>Turmas</Text>
             </View>
-            <View>
+            <View style={styles.positionAddIcon}>
                 <Icon2
                     name = "add-circle-outline"
-                    size={24}
+                    size={40}
                     color={COLORS.redTwo}
                     style={styles.iconGroup}
                 />
             </View>
+
           </View>
 
           <View style={styles.containerGroup}>
 
-                <LinearGradient
-                  colors={[COLORS.secondary, COLORS.primary]}
-                  locations={[0.3, 0.9]}
-                  style={styles.cardGroup}
-                >
-                  <View>
+            <View>
                     
-                    <Text style={styles.nameGroup}> Isso </Text>
-                    <View style={styles.containerGroup}>
-                      <Text style={styles.textGroup}>
+                <Text style={styles.nameGroup}> Isso </Text>
+                <View style={styles.cardGroup}>
+                    <Text style={styles.textGroup}>
                         Isso
-                      </Text>
-                    </View>
+                    </Text>
+                </View>
 
-                  </View>
-                </LinearGradient>
+            </View>
             
           </View>
           
