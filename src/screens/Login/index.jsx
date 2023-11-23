@@ -10,13 +10,17 @@ import { COLORS } from "../../utils/Colors";
 const Login = () => {
   const navigation = useNavigation();
 
+  const officeDevelop = () => {
+    navigation.navigate("OfficeDevelop");
+  }
+
   const register = () => {
     navigation.navigate("Register");
   };
 
   const main = () => {
-    navigation.navigate("Main");
-  };
+    navigation.navigate("Main")
+  }
 
   return (
     <KeyboardAvoidingView style={styles.background}>
@@ -62,7 +66,7 @@ const Login = () => {
           />
         </View>
 
-        <TouchableOpacity style={styles.acessButton} onPress={main}>
+        <TouchableOpacity style={styles.acessButton} onPress={officeDevelop}>
           <Text style={styles.acess}>Continuar</Text>
           <Icon
             style={styles.iconContainer}

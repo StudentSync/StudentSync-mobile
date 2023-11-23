@@ -12,6 +12,8 @@ import Configuration from './src/screens/Configuration';
 import Main from './src/components/BottomTabs';
 import ProfileStudent from './src/screens/ProfileStudent';
 import ProfileTeacher from './src/screens/ProfileTeacher';
+import OfficeDevelop from './src/screens/Office-develop';
+import { RoleProvider } from './src/components/RoleContext';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,19 +44,22 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer style={styles.main}>
-      <Stack.Navigator initialRouteName='Login'>
-        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
-        <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
-        <Stack.Screen name="Office" component={Office} options={{ headerShown: false }}/>
-        <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} options={{ headerShown: false }}/>
-        <Stack.Screen name="RegisterStudent" component={RegisterStudent} options={{ headerShown: false }}/>
-        <Stack.Screen name="Configuration" component={Configuration} options={{ headerShown: false }}/>
-        <Stack.Screen name="ProfileTeacher" component={ProfileTeacher} options={{ headerShown: false }}/>
-        <Stack.Screen name="ProfileStudent" component={ProfileStudent} options={{ headerShown: false }}/>
-        <Stack.Screen name="Main" component={Main} options={{ headerShown: false }}/>
-      </Stack.Navigator>
-    </NavigationContainer>
+    <RoleProvider>
+      <NavigationContainer style={styles.main}>
+        <Stack.Navigator initialRouteName='Login'>
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
+          <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
+          <Stack.Screen name="Office" component={Office} options={{ headerShown: false }}/>
+          <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} options={{ headerShown: false }}/>
+          <Stack.Screen name="RegisterStudent" component={RegisterStudent} options={{ headerShown: false }}/>
+          <Stack.Screen name="Configuration" component={Configuration} options={{ headerShown: false }}/>
+          <Stack.Screen name="ProfileTeacher" component={ProfileTeacher} options={{ headerShown: false }}/>
+          <Stack.Screen name="ProfileStudent" component={ProfileStudent} options={{ headerShown: false }}/>
+          <Stack.Screen name="Main" component={Main} options={{ headerShown: false }}/>
+          <Stack.Screen name="OfficeDevelop" component={OfficeDevelop} options={{ headerShown: false }}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    </RoleProvider>
   );
 }
 
