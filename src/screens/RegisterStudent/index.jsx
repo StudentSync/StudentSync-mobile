@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   View,
   TouchableOpacity,
@@ -15,27 +15,39 @@ import AntDesing from "react-native-vector-icons/AntDesign";
 import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
 import ProfileStudent from "../ProfileStudent";
+import SSApi from "../../services/SSApi";
 
 const RegisterStudent = () => {
+
+  useEffect(() => {
+    getCourses();
+  }, [])
+
+
   const navigation = useNavigation();
   const route = useRoute();
 
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [selectedSemester, setSelectedSemester] = useState(null);
+  const [courses, setCourses] = useState([]);
 
   const name = route.params?.name || "";
   const partsName = name.split(" ");
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileStudent = () => {
-    navigation.navigate("ProfileStudent", {name, selectedCourse, selectedSemester});
+    navigation.navigate("ProfileStudent", { name, selectedCourse, selectedSemester });
   };
 
-  const data = [
-    { key: "1", value: "Análise e Desenvolvimento de Sistemas" },
-    { key: "2", value: "Ciência de Dados" },
-    { key: "3", value: "Segurança da Informação" },
-  ];
+  const getCourses = async () => {
+    const response = await SSApi.get('courses');
+    const data = response.data.map(course => ({
+      key: course.id.toString(),
+      value: course.name,
+    }));
+    setCourses(data);
+  }
+
 
   const semester = [
     { key: "1", value: "Semestre 1" },
@@ -46,6 +58,9 @@ const RegisterStudent = () => {
     { key: "6", value: "Semestre 6" },
   ];
 
+  console.log(courses)
+  console.log(semester)
+  console.log(selectedCourse)
   return (
     <LinearGradient
       colors={[COLORS.primary, COLORS.secondary]}
@@ -54,7 +69,7 @@ const RegisterStudent = () => {
     >
       <KeyboardAvoidingView style={styles.main}>
         <View style={styles.containerTitle}>
-          <Text style={styles.title}>E aí { firstName }!</Text>
+          <Text style={styles.title}>E aí {firstName}!</Text>
           <Text style={styles.subtitle}>
             Adicione mais informações para continuar.
           </Text>
@@ -82,9 +97,9 @@ const RegisterStudent = () => {
             closeicon={
               <AntDesing name="close" size={22} color={COLORS.secondary} />
             }
-            setSelected={(val) => setSelectedCourse(val)}
-            data={data}
-            save="value"
+            setSelected={(key) => setSelectedCourse(key)}
+            data={courses}
+            save="key"
             placeholderTextColor={COLORS.white}
             placeholder="clique para selecionar"
             searchPlaceholder="Procure o grau"
