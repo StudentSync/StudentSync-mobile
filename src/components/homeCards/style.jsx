@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   card: {
     flexDirection: "row",
     width: "85%",
-    height: 100,
+    height: 120,
     borderRadius: 24,
     backgroundColor: "#d8d8d8",
   },
@@ -28,11 +28,13 @@ export const styles = StyleSheet.create({
   titleCard: {
     alignItems: "center",
     marginRight: "auto",
-    marginTop: 24,
+    marginTop: 18,
+    width: "60%",
   },
   title: {
     fontFamily: "medium",
     color: COLORS.primary,
+    textAlign: "center",
     fontSize: 18,
   },
   information: {

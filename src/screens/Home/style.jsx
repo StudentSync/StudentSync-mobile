@@ -48,7 +48,8 @@ export const styles = StyleSheet.create({
   },
   viewCards: {
     marginTop: 24,
-    width: "90%",
+    marginLeft: "10%",
+    width: "95%",
     alignSelf: "center",
     
   },
