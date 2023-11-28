@@ -1,78 +1,51 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../../utils/Colors";
 
+
 export const styles = StyleSheet.create({
     background: {
       flex: 1,
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: COLORS.white,
-    },
-    container: {
-      flex: 1,
-      alignItems: "center",
-      width: "90%",
       gap: 5,
     },
     containerNavigation: {
-      flex: 1,
+      width: "90%",
       flexDirection: "row",
       justifyContent: "space-between",
-      alignItems: "flex-end",
-      
-      backgroundColor: COLORS.secondary
-    },
-    positionAddIcon: {
-      flex: 1,
-      flexDirection: "row",
-      width: "50%"
-    },
-    containerTitle: {
-      flex: 1,
-      justifyContent: "space-between",
-      alignItems: "flex-start",
+      alignItems: "center",
     },
     title: {
       color: COLORS.primary,
       fontFamily: "light",
       fontSize: 20,
+      marginRight: "auto",
+      marginLeft: 10,
     },
-    iconGroup: {
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "space-between",
-    },
-    containerGroup:{
-      flex: 1,
-      alignItems: "center",
-      justifyContent: "space-around",
+    containerGroup: {
+      height:"65%",
       width: "90%",
-      height: "50%",
-      marginBottom: 120,
+      alignItems: "center",
+      justifyContent: "center",
+      gap:10,
     },
     cardGroup: {
-      backgroundColor: COLORS.secondary,
+      backgroundColor: COLORS.primary,
+      height: "15%",     
+      width: "90%",
+      justifyContent: "space-evenly",
       alignItems: "center",
-      justifyContent: "flex-start",
-      width: "100%",
-      height: "32%",
       borderRadius: 20,
     },
-    nameGroup: {
-      textAlign: "center",
-      marginTop: 25,
-      fontFamily: "medium",
-      fontSize: 18,
-      color: COLORS.white
-    },
-    containerGroup:{
-      width: "80%",
+    titleGroup: {
+      color: COLORS.white,
+      fontSize: 22,
+      fontFamily: "light",
     },
     textGroup: {
-      textAlign: "center",
-      marginTop: 15,
-      fontFamily: "light",
-      fontSize: 17,
-      color: COLORS.white
-    },
+      color: COLORS.secondary,
+      fontSize: 16,
+      fontFamily: "thin",
+    }
 });
