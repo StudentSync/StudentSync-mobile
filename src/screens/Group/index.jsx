@@ -6,13 +6,13 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
 import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
 
 const Group = () => {
+
   return (
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.container}>
@@ -36,22 +36,7 @@ const Group = () => {
               style={styles.iconGroup}
             />
           </View>
-        </View>
-
-        <View style={styles.containerGroup}>
-          <LinearGradient
-            colors={[COLORS.secondary, COLORS.primary]}
-            locations={[0.3, 0.9]}
-            style={styles.cardGroup}
-          >
-            <View>
-              <Text style={styles.nameGroup}> Isso </Text>
-              <View style={styles.containerGroup}>
-                <Text style={styles.textGroup}>Isso</Text>
-              </View>
-            </View>
-          </LinearGradient>
-        </View>
+     
       </View>
     </KeyboardAvoidingView>
   );
