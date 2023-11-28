@@ -1,14 +1,16 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Home from "../screens/Home";
-import Notifications from "../screens/Notifications";
 import HomeIcon from "react-native-vector-icons/Octicons";
+import GroupIcon from "react-native-vector-icons/FontAwesome";
 import NotificationIcon from "react-native-vector-icons/Ionicons";
 import ProfileIcon from "react-native-vector-icons/AntDesign";
 import { COLORS } from "../utils/Colors";
 import { useRole } from "../components/RoleContext";
 
+import Home from "../screens/Home";
+import Group from "../screens/Group";
+import Notifications from "../screens/Notifications";
 import ProfileStudent from "../screens/ProfileStudent";
 import ProfileTeacher from "../screens/ProfileTeacher";
 
@@ -25,6 +27,16 @@ function Main() {
         options={{
           tabBarIcon: ({ color, size }) => (
             <HomeIcon name="home" color={COLORS.primary} size={24} />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Group"
+        component={Group}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <GroupIcon name="group" color={COLORS.primary} size={24} />
           ),
           headerShown: false,
         }}
