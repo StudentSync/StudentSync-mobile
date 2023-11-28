@@ -28,6 +28,7 @@ export const styles = StyleSheet.create({
       width: "90%",
       alignItems: "center",
       justifyContent: "center",
+      gap:10,
     },
     cardGroup: {
       backgroundColor: COLORS.primary,

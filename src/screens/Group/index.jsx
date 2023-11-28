@@ -12,10 +12,20 @@ import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
 
 const Group = () => {
+
+  const data = [
+    { id: 1, title: "Group 1", participants: "John, Jane" },
+    { id: 2, title: "Group 2", participants: "Alice, Bob" },
+    { id: 3, title: "Group 3", participants: "Charlie, David" },
+    { id: 4, title: "Group 3", participants: "Charlie, David" },
+    { id: 5, title: "Group 3", participants: "Charlie, David" },
+  ];
+
   return (
     <KeyboardAvoidingView style={styles.background}>
       
       <View style={styles.containerNavigation}>
+
         <TouchableOpacity>
           <Icon
             name="addusergroup"
@@ -35,18 +45,20 @@ const Group = () => {
             style={styles.iconGroup}
           />
         </View>
-      </View>
-
-      <View style={styles.containerGroup}>
-        
-        <View style={styles.cardGroup}>
-          <Text style={styles.titleGroup}> Title </Text>
-          <Text style={styles.textGroup}> Participantes </Text>
-        </View>
-
-
 
       </View>
+
+
+      
+      <View  style={styles.containerGroup}>
+        {data.map((group) => (
+            <View key={group.id} style={styles.cardGroup}>
+              <Text style={styles.titleGroup}>{group.title}</Text>
+              <Text style={styles.textGroup}>{group.participants}</Text>
+            </View>
+        ))}
+      </View>
+     
       
     </KeyboardAvoidingView>
   );
