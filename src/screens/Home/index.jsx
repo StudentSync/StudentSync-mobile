@@ -14,11 +14,11 @@
 
   const Home = () => {
     const eventsData = [
-      { id: '1', startTime: '8h00', endTime: '9h00', title: 'Reunião de Planejamento', room: 'Sala A', organizer: 'João Silva' },
-      { id: '2', startTime: '10h30', endTime: '11h30', title: 'Apresentação de Projeto', room: 'Sala B', organizer: 'Maria Oliveira' },
-      { id: '3', startTime: '13h00', endTime: '14h30', title: 'Almoço de Equipe', room: 'Restaurante', organizer: 'Equipe de Desenvolvimento' },
-      { id: '4', startTime: '15h15', endTime: '16h00', title: 'Entrevista de Candidato', room: 'Sala de Reuniões 2', organizer: 'Recursos Humanos' },
-      { id: '5', startTime: '17h45', endTime: '18h30', title: 'Treinamento de Novos Recursos', room: 'Sala de Treinamento', organizer: 'Ana Santos' },
+      { id: '1', startTime: '8h00', endTime: '9h00', title: 'Dedo quebradoquebradoquebradoquebradoquebradoquebradoquebrado', room: 'Sala A', organizer: 'Matheus Gois' },
+      { id: '2', startTime: '10h30', endTime: '11h30', title: 'Meu prefeito', room: 'Sala B', organizer: 'Hivna Castor' },
+      { id: '3', startTime: '13h00', endTime: '14h30', title: 'Almoço de Equipe', room: 'RU', organizer: 'Jurimetria e Ads' },
+      { id: '4', startTime: '15h15', endTime: '16h00', title: 'Monster', room: 'Sala de Reuniões 2', organizer: 'Canibal' },
+      { id: '5', startTime: '17h45', endTime: '18h30', title: 'Semana puxada', room: 'Sala de Treinamento', organizer: 'Matheus dnv' },
     ];
     return (
       <View style={styles.main}>

@@ -28,8 +28,15 @@ export const styles = StyleSheet.create({
   titleCard: {
     alignItems: "center",
     marginRight: "auto",
-    marginTop: 18,
-    width: "60%",
+    marginTop: "10%",
+    width: "100%",
+  },
+  scrollTitleCard: {
+    flexDirection:"column",
+    alignItems: "center",
+    marginRight: "auto",
+    width: "50%",
+    gap: 10,
   },
   title: {
     fontFamily: "medium",
@@ -38,7 +45,6 @@ export const styles = StyleSheet.create({
     fontSize: 18,
   },
   information: {
-    marginTop: 12,
     gap: 5,
   },
   room: {

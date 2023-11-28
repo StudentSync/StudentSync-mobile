@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import React from "react";
+import { Text, View, ScrollView } from "react-native";
 import { styles } from "./style";
 
 const HomeCards = ({ event }) => {
@@ -11,11 +12,19 @@ const HomeCards = ({ event }) => {
         <Text style={styles.endTime}>{endTime}</Text>
       </View>
       <View style={styles.titleCard}>
-        <Text style={styles.title}>{title}</Text>
-        <View style={styles.information}>
-          <Text style={styles.room}>{room}</Text>
-          <Text style={styles.organizer}>{organizer}</Text>
-        </View>
+        <ScrollView
+          contentContainerStyle={styles.scrollTitleCard}
+          vertical
+          showsVerticalScrollIndicator={false}
+        >
+          <View>
+          <Text style={styles.title}>{title}</Text>
+          </View>
+          <View style={styles.information}>
+            <Text style={styles.room}>{room}</Text>
+            <Text style={styles.organizer}>{organizer}</Text>
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
