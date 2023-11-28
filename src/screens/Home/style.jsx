@@ -47,55 +47,13 @@ export const styles = StyleSheet.create({
     color: COLORS.white,
   },
   viewCards: {
-    flexDirection: "column",
-    alignItems: "center",
-    gap: 10,
     marginTop: 24,
-    width: "90%",
+    marginLeft: "10%",
+    width: "95%",
+    alignSelf: "center",
+    
   },
-  card: {
-    flexDirection: "row",
-    width: "85%",
-    height: "28%",
-    borderRadius: 24,
-    backgroundColor: "#d8d8d8",
-  },
-  time: {
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 24,
-    width: "32%",
-    marginRight: "auto",
-    backgroundColor: COLORS.primary,
-  },
-  startTime: {
-    fontFamily: "medium",
-    fontSize: 24,
-    color: COLORS.white,
-  },
-  endTime: {
-    color: COLORS.white,
-  },
-  titleCard: {
-    alignItems: "center",
-    marginRight: "auto",
+  homeCards: {
     marginTop: 24,
-  },
-  title: {
-    fontFamily: "medium",
-    color: COLORS.primary,
-    fontSize: 18,
-  },
-  information: {
-    marginTop: 12,
-    gap: 5,
-  },
-  room: {
-    color: COLORS.secondary,
-    fontFamily: "medium",
-  },
-  organizer: {
-    color: COLORS.secondary,
-    fontFamily: "medium",
   },
 });

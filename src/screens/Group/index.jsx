@@ -48,7 +48,6 @@ const Group = () => {
 
       </View>
 
-
       
       <View  style={styles.containerGroup}>
         {data.map((group) => (
@@ -58,8 +57,7 @@ const Group = () => {
             </View>
         ))}
       </View>
-     
-      
+
     </KeyboardAvoidingView>
   );
 };
