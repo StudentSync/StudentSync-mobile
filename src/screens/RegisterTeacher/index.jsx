@@ -4,6 +4,8 @@ import {
   TouchableOpacity,
   TextInput,
   Text,
+  TouchableWithoutFeedback,
+  Keyboard,
   KeyboardAvoidingView,
 } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
@@ -26,7 +28,8 @@ const RegisterTeacher = () => {
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileTeacher = () => {
-    navigation.navigate("ProfileTeacher", { name, selectedDegree, about })
+    // navigation.navigate("ProfileTeacher", { name, selectedDegree, about })
+    navigation.navigate("Login")
   };
 
   const [selectedDegree, setSelectedDegree] = useState(null);
@@ -43,6 +46,7 @@ const RegisterTeacher = () => {
   };
 
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <LinearGradient
       colors={[COLORS.secondary, COLORS.primary]}
       locations={[0.3, 0.9]}
@@ -102,6 +106,7 @@ const RegisterTeacher = () => {
       
       </KeyboardAvoidingView>
     </LinearGradient>
+    </TouchableWithoutFeedback>
   );
 };
 export default RegisterTeacher;

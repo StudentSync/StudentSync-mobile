@@ -4,6 +4,8 @@ import {
   TouchableOpacity,
   Text,
   KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -16,9 +18,10 @@ import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
 import ProfileStudent from "../ProfileStudent";
 import SSApi from "../../services/SSApi";
+import { AuthContext } from "../../contexts/auth";
 
 const RegisterStudent = () => {
-
+  
   useEffect(() => {
     getCourses();
   }, [])
@@ -36,7 +39,8 @@ const RegisterStudent = () => {
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileStudent = () => {
-    navigation.navigate("ProfileStudent", { name, selectedCourse, selectedSemester });
+    // navigation.navigate("ProfileStudent", { name, selectedCourse, selectedSemester });
+    navigation.navigate("Login")
   };
 
   const getCourses = async () => {
@@ -62,6 +66,7 @@ const RegisterStudent = () => {
   console.log(semester)
   console.log(selectedCourse)
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <LinearGradient
       colors={[COLORS.primary, COLORS.secondary]}
       locations={[0.3, 0.9]}
@@ -145,6 +150,7 @@ const RegisterStudent = () => {
         </View>
       </KeyboardAvoidingView>
     </LinearGradient>
+    </TouchableWithoutFeedback>
   );
 };
 export default RegisterStudent;

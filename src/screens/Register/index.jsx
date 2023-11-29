@@ -5,6 +5,8 @@ import {
   TextInput,
   Text,
   KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard, 
 } from "react-native";
 import { styles } from "./style"
 import { useNavigation } from "@react-navigation/native";
@@ -39,6 +41,7 @@ const Register = () => {
   };
 
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <LinearGradient
       colors={[COLORS.secondary, COLORS.primary]}
       locations={[0.3, 0.9]}
@@ -135,6 +138,7 @@ const Register = () => {
         </View>
       </KeyboardAvoidingView>
     </LinearGradient>
+    </TouchableWithoutFeedback>
   );
 };
 export default Register;

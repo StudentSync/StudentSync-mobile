@@ -12,7 +12,7 @@ import { COLORS } from "../../utils/Colors";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Icon2 from "react-native-vector-icons/Entypo";
 import HomeCards from "../../components/homeCards";
-import { HomeNewCard } from "../../components/homeNewCard";
+import { ModalHome } from "../../components/modalHome";
 
 const Home = () => {
   const [newCardVisible, setNewCardVisible] = useState(false);
@@ -107,7 +107,7 @@ function closeModal() {
       </KeyboardAvoidingView>
 
       <Modal visible={newCardVisible} animationType="fade" transparent={true}>
-        <HomeNewCard newCardData={newCardData}
+        <ModalHome newCardData={newCardData}
           setNewCardData={setNewCardData}
           addNewCard={addNewCard}
           closeModal={closeModal}
