@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   View,
   KeyboardAvoidingView,
@@ -9,23 +9,22 @@ import {
 import { styles }  from "./style";
 import { COLORS } from "../../utils/Colors";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { AuthContext } from "../../contexts/auth";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
-import Icon3 from "react-native-vector-icons/Feather";
 
 const ProfileStudent = () => {
   const navigation = useNavigation();
   const route = useRoute();
+  const { name: contextName } = useContext(AuthContext);
 
   const Configuration = () => {
     navigation.navigate("Configuration");
   };
 
-  const name = route.params?.name || "";
+  const name = route.params?.name || contextName;
   const selectedCourse = route.params?.selectedCourse || null;
   const selectedSemester = route.params?.selectedSemester || null;
-
-
 
   return (
     <KeyboardAvoidingView style={styles.background}>

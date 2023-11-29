@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+// import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeIcon from "react-native-vector-icons/FontAwesome5";
 import GroupIcon from "react-native-vector-icons/FontAwesome";
 import NotificationIcon from "react-native-vector-icons/Ionicons";
@@ -14,7 +16,7 @@ import Notifications from "../screens/Notifications";
 import ProfileStudent from "../screens/ProfileStudent";
 import ProfileTeacher from "../screens/ProfileTeacher";
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 function Main() {
   const { role } = useRole();

@@ -18,9 +18,10 @@ import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
 import ProfileStudent from "../ProfileStudent";
 import SSApi from "../../services/SSApi";
+import { AuthContext } from "../../contexts/auth";
 
 const RegisterStudent = () => {
-
+  
   useEffect(() => {
     getCourses();
   }, [])
@@ -38,7 +39,8 @@ const RegisterStudent = () => {
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileStudent = () => {
-    navigation.navigate("ProfileStudent", { name, selectedCourse, selectedSemester });
+    // navigation.navigate("ProfileStudent", { name, selectedCourse, selectedSemester });
+    navigation.navigate("Login")
   };
 
   const getCourses = async () => {

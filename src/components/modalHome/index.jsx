@@ -4,7 +4,7 @@ import { styles } from "./style";
 
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-export function HomeNewCard({
+export function ModalHome({
   setNewCardData,
   addNewCard,
   closeModal,

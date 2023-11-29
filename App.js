@@ -47,6 +47,7 @@ export default function App() {
 
   return (
     <NavigationContainer style={styles.main}>
+      <AuthProvider>
       <RoleProvider>
         <Stack.Navigator initialRouteName='Login'>
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
@@ -61,6 +62,7 @@ export default function App() {
           <Stack.Screen name="OfficeDevelop" component={OfficeDevelop} options={{ headerShown: false }}/>
         </Stack.Navigator>
       </RoleProvider>
+      </AuthProvider>
     </NavigationContainer>
   );
 }

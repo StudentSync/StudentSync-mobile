@@ -28,7 +28,8 @@ const RegisterTeacher = () => {
   const firstName = partsName.length > 0 ? partsName[0] : ""
 
   const profileTeacher = () => {
-    navigation.navigate("ProfileTeacher", { name, selectedDegree, about })
+    // navigation.navigate("ProfileTeacher", { name, selectedDegree, about })
+    navigation.navigate("Login")
   };
 
   const [selectedDegree, setSelectedDegree] = useState(null);

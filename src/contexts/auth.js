@@ -1,13 +1,20 @@
-import React, { Children, createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-export const AuthContext = createContext({})
+export const AuthContext = createContext({});
 
-function AuthProvider({children}){
-    return (
-        <AuthContext.Provider value={{nome: "GABRIEL"}}>
-            {children}
-        </AuthContext.Provider>
-    )
+function AuthProvider({ children }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const updateName = (newName) => {
+    setName(newName);
+  };
+
+  return (
+    <AuthContext.Provider value={{ name, updateName }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 
 export default AuthProvider;
