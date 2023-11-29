@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeIcon from "react-native-vector-icons/Octicons";
+import HomeIcon from "react-native-vector-icons/FontAwesome5";
 import GroupIcon from "react-native-vector-icons/FontAwesome";
 import NotificationIcon from "react-native-vector-icons/Ionicons";
-import ProfileIcon from "react-native-vector-icons/AntDesign";
+import ProfileIcon from "react-native-vector-icons/FontAwesome";
 import { COLORS } from "../utils/Colors";
 import { useRole } from "../components/RoleContext";
 
@@ -47,7 +47,7 @@ function Main() {
         options={{
           tabBarIcon: ({ color, size }) => (
             <NotificationIcon
-              name="notifications-outline"
+              name="notifications"
               color={COLORS.primary}
               size={24}
             />
