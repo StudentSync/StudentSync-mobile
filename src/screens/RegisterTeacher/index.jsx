@@ -4,6 +4,8 @@ import {
   TouchableOpacity,
   TextInput,
   Text,
+  TouchableWithoutFeedback,
+  Keyboard,
   KeyboardAvoidingView,
 } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
@@ -43,6 +45,7 @@ const RegisterTeacher = () => {
   };
 
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <LinearGradient
       colors={[COLORS.secondary, COLORS.primary]}
       locations={[0.3, 0.9]}
@@ -102,6 +105,7 @@ const RegisterTeacher = () => {
       
       </KeyboardAvoidingView>
     </LinearGradient>
+    </TouchableWithoutFeedback>
   );
 };
 export default RegisterTeacher;

@@ -6,7 +6,7 @@ import GroupIcon from "react-native-vector-icons/FontAwesome";
 import NotificationIcon from "react-native-vector-icons/Ionicons";
 import ProfileIcon from "react-native-vector-icons/FontAwesome";
 import { COLORS } from "../utils/Colors";
-import { useRole } from "../components/RoleContext";
+import { useRole } from "../contexts/RoleContext"; 
 
 import Home from "../screens/Home";
 import Group from "../screens/Group";

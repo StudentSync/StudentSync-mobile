@@ -1,5 +1,13 @@
 import React from "react";
-import { View, KeyboardAvoidingView, TextInput, TouchableOpacity, Text } from "react-native";
+import {
+  View,
+  KeyboardAvoidingView,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  Keyboard,
+  Text,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
 import Icon from "react-native-vector-icons/AntDesign";
@@ -12,17 +20,18 @@ const Login = () => {
 
   const officeDevelop = () => {
     navigation.navigate("OfficeDevelop");
-  }
+  };
 
   const register = () => {
     navigation.navigate("Register");
   };
 
   const main = () => {
-    navigation.navigate("Main")
-  }
+    navigation.navigate("Main");
+  };
 
   return (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <KeyboardAvoidingView style={styles.background}>
       <View style={styles.containerLogo}>
         <Text style={styles.logo}>Bem Vindo</Text>
@@ -79,9 +88,9 @@ const Login = () => {
         <TouchableOpacity style={styles.registerButton} onPress={register}>
           <Text style={styles.register}>Não possui conta? Crie aqui</Text>
         </TouchableOpacity>
-
       </View>
     </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 };
 

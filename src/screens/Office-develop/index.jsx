@@ -10,11 +10,11 @@
   import { LinearGradient } from "expo-linear-gradient";
   import { COLORS } from "../../utils/Colors";
   import Icons from "react-native-vector-icons/FontAwesome5";
-  import { useRole } from "../../components/RoleContext";
+  import { useRole } from "../../contexts/RoleContext"; 
 
   const OfficeDevelop = () => {
     const { setRoleAndNavigate } = useRole();
-    const navigation = useNavigation(); // Certifique-se de usar useNavigation
+    const navigation = useNavigation();
     const route = useRoute();
 
     const name = route.params?.name || "";
