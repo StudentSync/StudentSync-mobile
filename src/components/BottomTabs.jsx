@@ -22,7 +22,7 @@ function Main() {
   const { role } = useRole();
 
   return (
-    <Tab.Navigator>
+    <Tab.Navigator activeColor={COLORS.secondary}>
       <Tab.Screen
         name="Home"
         component={Home}
