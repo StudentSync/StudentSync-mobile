@@ -26,33 +26,47 @@ export const styles = StyleSheet.create({
     color: COLORS.white,
   },
   titleCard: {
-    alignItems: "center",
-    marginRight: "auto",
-    marginTop: "10%",
-    width: "100%",
+    marginTop: "5%",
+    width: "70%",
   },
   scrollTitleCard: {
     flexDirection:"column",
     alignItems: "center",
     marginRight: "auto",
-    width: "50%",
     gap: 10,
+  },
+  informationCard: {
+    width: "100%",
+    height:"100%",
+    flexDirection: "row",
+    justifyContent: "center",
   },
   title: {
     fontFamily: "medium",
     color: COLORS.primary,
     textAlign: "center",
     fontSize: 18,
+    width: "100%",
+    height: "30%",
   },
   information: {
-    gap: 5,
+    justifyContent:"center",
+    width: "80%",
+    height: "120%",
+    gap: 6,
   },
   room: {
     color: COLORS.secondary,
     fontFamily: "medium",
+    textAlign: "center",
   },
   organizer: {
     color: COLORS.secondary,
     fontFamily: "medium",
+    textAlign: "center",
+  },
+  positionIcon: {
+    marginTop: "5%",
+    justifyContent: "center",
   },
 });
