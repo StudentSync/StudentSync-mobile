@@ -14,10 +14,8 @@ import ProfileStudent from './src/screens/ProfileStudent';
 import ProfileTeacher from './src/screens/ProfileTeacher';
 import OfficeDevelop from './src/screens/Office-develop';
 import Initial from './src/screens/Initial';
-import { RoleProvider } from './src/contexts/RoleContext';
-
-import AuthProvider from './src/contexts/auth';
-
+import { AuthProvider } from './src/contexts/AuthContext';
+import { RegisterProvider } from './src/contexts/RegisterContext';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -49,21 +47,21 @@ export default function App() {
   return (
     <NavigationContainer style={styles.main}>
       <AuthProvider>
-      <RoleProvider>
-        <Stack.Navigator initialRouteName='Initial'>
-        <Stack.Screen name="Initial" component={Initial} options={{ headerShown: false }}/>
-          <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
-          <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
-          <Stack.Screen name="Office" component={Office} options={{ headerShown: false }}/>
-          <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} options={{ headerShown: false }}/>
-          <Stack.Screen name="RegisterStudent" component={RegisterStudent} options={{ headerShown: false }}/>
-          <Stack.Screen name="Configuration" component={Configuration} options={{ headerShown: false }}/>
-          <Stack.Screen name="ProfileTeacher" component={ProfileTeacher} options={{ headerShown: false }}/>
-          <Stack.Screen name="ProfileStudent" component={ProfileStudent} options={{ headerShown: false }}/>
-          <Stack.Screen name="Main" component={Main} options={{ headerShown: false }}/>
-          <Stack.Screen name="OfficeDevelop" component={OfficeDevelop} options={{ headerShown: false }}/>
-        </Stack.Navigator>
-      </RoleProvider>
+        <RegisterProvider>
+          <Stack.Navigator initialRouteName='Initial'>
+            <Stack.Screen name="Initial" component={Initial} options={{ headerShown: false }} />
+            <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+            <Stack.Screen name="Register" component={Register} options={{ headerShown: false }} />
+            <Stack.Screen name="Office" component={Office} options={{ headerShown: false }} />
+            <Stack.Screen name="RegisterTeacher" component={RegisterTeacher} options={{ headerShown: false }} />
+            <Stack.Screen name="RegisterStudent" component={RegisterStudent} options={{ headerShown: false }} />
+            <Stack.Screen name="Configuration" component={Configuration} options={{ headerShown: false }} />
+            <Stack.Screen name="ProfileTeacher" component={ProfileTeacher} options={{ headerShown: false }} />
+            <Stack.Screen name="ProfileStudent" component={ProfileStudent} options={{ headerShown: false }} />
+            <Stack.Screen name="Main" component={Main} options={{ headerShown: false }} />
+            <Stack.Screen name="OfficeDevelop" component={OfficeDevelop} options={{ headerShown: false }} />
+          </Stack.Navigator>
+        </RegisterProvider>
       </AuthProvider>
     </NavigationContainer>
   );

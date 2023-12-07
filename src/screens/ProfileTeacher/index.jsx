@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   View,
   KeyboardAvoidingView,
@@ -6,19 +6,17 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import { styles }  from "./style";
+import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
-import { useNavigation, useRoute} from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const ProfileTeacher = () => {
   const navigation = useNavigation();
-  const route = useRoute();
 
-  const name = route.params?.name || '';
-  const about = route.params?.about || '';
-  const selectedDegree = route.params?.selectedDegree || null;
+  const { user } = useContext(AuthContext);
 
   const configuration = () => {
     navigation.navigate("Configuration");
@@ -33,7 +31,7 @@ const ProfileTeacher = () => {
               style={styles.iconsNavigation}
               name="arrowleft"
               size={25}
-              color= {COLORS.primary}
+              color={COLORS.primary}
             />
           </View>
           <View style={styles.containerTitle}>
@@ -47,7 +45,7 @@ const ProfileTeacher = () => {
               color={COLORS.primary}
             />
           </TouchableOpacity>
-          
+
         </View>
 
         <View style={styles.containerUser}>
@@ -60,7 +58,7 @@ const ProfileTeacher = () => {
             />
           </View>
           <View>
-            <Text style={styles.nameUser}>{ name }</Text>
+            <Text style={styles.nameUser}>{user.name}</Text>
           </View>
         </View>
 
@@ -73,14 +71,14 @@ const ProfileTeacher = () => {
 
           <View style={styles.degreeContainer}>
             <View style={styles.degreeCard}>
-              <Text style={styles.semesterText}> { selectedDegree }</Text>
+              <Text style={styles.semesterText}> {user.academic_degree}</Text>
             </View>
           </View>
-          
+
           <View style={styles.statusContainer}>
             <View style={styles.statusCard}>
               <Text style={styles.statusText}>
-                { about }
+                {user.description}
               </Text>
             </View>
           </View>

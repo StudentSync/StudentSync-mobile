@@ -10,14 +10,15 @@ import { styles } from "./style";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS } from "../../utils/Colors";
 import { LinearGradient } from "expo-linear-gradient";
-
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Initial = () => {
-    const navigation = useNavigation();
-
-    const login = () => {
-        navigation.navigate("Login");
-      };
+  const navigation = useNavigation();
+  const { verifyToken } = useContext(AuthContext)
+  const login = () => {
+    navigation.navigate("Login");
+  };
 
   return (
     <LinearGradient
@@ -28,8 +29,8 @@ const Initial = () => {
       <KeyboardAvoidingView style={styles.background}>
         <View style={styles.containerLogo}>
           <Text style={styles.logo}>StudentSync</Text>
-          <Text style={styles.subTitle}>Organização de eventos</Text>
-          <TouchableOpacity style={styles.button} onPress={login}>
+          <Text style={styles.subTitle}>Organização de compromissos</Text>
+          <TouchableOpacity style={styles.button} onPress={verifyToken}>
             <Text style={styles.textButton}>Iniciar</Text>
           </TouchableOpacity>
         </View>

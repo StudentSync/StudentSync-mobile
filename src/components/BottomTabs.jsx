@@ -8,19 +8,21 @@ import GroupIcon from "react-native-vector-icons/FontAwesome";
 import NotificationIcon from "react-native-vector-icons/Ionicons";
 import ProfileIcon from "react-native-vector-icons/FontAwesome";
 import { COLORS } from "../utils/Colors";
-import { useRole } from "../contexts/RoleContext"; 
 
 import Home from "../screens/Home";
 import Group from "../screens/Group";
 import Notifications from "../screens/Notifications";
 import ProfileStudent from "../screens/ProfileStudent";
 import ProfileTeacher from "../screens/ProfileTeacher";
-
+import { AuthContext } from "../contexts/AuthContext";
+import { useContext } from "react";
 const Tab = createMaterialBottomTabNavigator();
 
 function Main() {
-  const { role } = useRole();
 
+  const role = 'professor'
+  const { user } = useContext(AuthContext);
+  console.log(user)
   return (
     <Tab.Navigator activeColor={COLORS.secondary}>
       <Tab.Screen
@@ -59,7 +61,7 @@ function Main() {
       />
       <Tab.Screen
         name="Profile"
-        component={role === "teacher" ? ProfileTeacher : ProfileStudent}
+        component={user.role === "student" ? ProfileStudent : ProfileTeacher}
         options={{
           tabBarIcon: ({ color, size }) => (
             <ProfileIcon name="user" color={COLORS.primary} size={24} />

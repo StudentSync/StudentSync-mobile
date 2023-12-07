@@ -6,23 +6,23 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
-import { styles }  from "./style";
+import { styles } from "./style";
 import { COLORS } from "../../utils/Colors";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { AuthContext } from "../../contexts/auth";
 import Icon from "react-native-vector-icons/AntDesign";
 import Icon2 from "react-native-vector-icons/Ionicons";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const ProfileStudent = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const { name: contextName } = useContext(AuthContext);
+  const { user } = useContext(AuthContext)
 
   const Configuration = () => {
     navigation.navigate("Configuration");
   };
 
-  const name = route.params?.name || contextName;
+  const name = "Gois"
   const selectedCourse = route.params?.selectedCourse || null;
   const selectedSemester = route.params?.selectedSemester || null;
 
@@ -35,7 +35,7 @@ const ProfileStudent = () => {
               style={styles.iconsNavigation}
               name="arrowleft"
               size={25}
-              color= {COLORS.primary}
+              color={COLORS.primary}
             />
           </View>
           <View style={styles.containerTitle}>
@@ -49,7 +49,7 @@ const ProfileStudent = () => {
               color={COLORS.primary}
             />
           </TouchableOpacity>
-          
+
         </View>
 
         <View style={styles.containerUser}>
@@ -62,7 +62,7 @@ const ProfileStudent = () => {
             />
           </View>
           <View>
-            <Text style={styles.nameUser}> { name } </Text>
+            <Text style={styles.nameUser}> {user.name} </Text>
           </View>
         </View>
 
@@ -76,14 +76,14 @@ const ProfileStudent = () => {
           <View style={styles.courseContainer}>
             <View style={styles.courseCard}>
               <Text style={styles.courseText}>
-                { selectedCourse }
+                {user.course}
               </Text>
             </View>
           </View>
 
           <View style={styles.semesterContainer}>
             <View style={styles.semesterCard}>
-              <Text style={styles.semesterText}> { selectedSemester }</Text>
+              <Text style={styles.semesterText}> {user.semester}</Text>
             </View>
           </View>
 
