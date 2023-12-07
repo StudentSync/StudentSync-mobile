@@ -36,7 +36,7 @@ class LinkedList {
     }
   }
 
-  toArray() {
+  iterator() {
     const result = [];
     let current = this.head;
     while (current) {
@@ -120,7 +120,7 @@ const Notifications = () => {
           </View>
         </View>
         <View style={styles.containerNotification}>
-          {notificationList.toArray().map((notification) =>
+          {notificationList.iterator().map((notification) =>
             notification.isVisible ? (
               <LinearGradient
                 key={notification.id}
