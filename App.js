@@ -12,7 +12,6 @@ import Configuration from './src/screens/Configuration';
 import Main from './src/components/BottomTabs';
 import ProfileStudent from './src/screens/ProfileStudent';
 import ProfileTeacher from './src/screens/ProfileTeacher';
-import OfficeDevelop from './src/screens/Office-develop';
 import Initial from './src/screens/Initial';
 import { AuthProvider } from './src/contexts/AuthContext';
 import { RegisterProvider } from './src/contexts/RegisterContext';
@@ -59,7 +58,6 @@ export default function App() {
             <Stack.Screen name="ProfileTeacher" component={ProfileTeacher} options={{ headerShown: false }} />
             <Stack.Screen name="ProfileStudent" component={ProfileStudent} options={{ headerShown: false }} />
             <Stack.Screen name="Main" component={Main} options={{ headerShown: false }} />
-            <Stack.Screen name="OfficeDevelop" component={OfficeDevelop} options={{ headerShown: false }} />
           </Stack.Navigator>
         </RegisterProvider>
       </AuthProvider>

@@ -8,7 +8,6 @@ import {
   Keyboard,
 } from "react-native";
 import { SelectList } from "react-native-dropdown-select-list";
-import { useNavigation, useRoute } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/AntDesign";
 import MaterialIcon from "react-native-vector-icons/MaterialIcons";
