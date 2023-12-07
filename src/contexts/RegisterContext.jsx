@@ -14,7 +14,7 @@ export function RegisterProvider({ children }) {
     console.log(userParams.email)
 
     const response = await SSApi.post('/verify_email', { email: userParams.email })
-    if (response.data.message === "Não encontrado!") {
+    if (response.data.message === "Não foi encontrado!") {
       setName(userParams.name);
       setEmail(userParams.email);
       setPassword(userParams.password);
