@@ -17,15 +17,11 @@ const Configuration = () => {
     const { logout, user } = useContext(AuthContext);
     const navigation = useNavigation();
 
-    const profileTeacher = () => {
-        navigation.navigate("ProfileTeacher")
-    };
-
     return (
         <KeyboardAvoidingView style={styles.background}>
 
             <View style={styles.containerNavigation}>
-                <TouchableOpacity onPress={profileTeacher}>
+                <TouchableOpacity onPress={() => { navigation.goBack() }}>
                     <Icon
                         style={styles.iconsNavigation}
                         name="arrowleft"
