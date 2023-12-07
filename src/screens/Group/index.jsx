@@ -36,7 +36,7 @@ class LinkedList {
     }
   }
 
-  toArray() {
+  iterator() {
     const result = [];
     let current = this.head;
     while (current) {
@@ -85,7 +85,7 @@ const Group = () => {
       </View>
 
       <View style={styles.containerGroup}>
-        {groupList.toArray().map(renderGroupCard)}
+        {groupList.iterator().map(renderGroupCard)}
       </View>
     </KeyboardAvoidingView>
   );
