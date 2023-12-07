@@ -14,7 +14,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
 const Configuration = () => {
-    const { logout } = useContext(AuthContext);
+    const { logout, user } = useContext(AuthContext);
     const navigation = useNavigation();
 
     const profileTeacher = () => {
@@ -40,8 +40,8 @@ const Configuration = () => {
             </View>
 
             <View style={styles.containerUser}>
-                <Text style={styles.userName}>Anderson Uchôa</Text>
-                <Text style={styles.userEmail}>andersonuchoa@ufc.br</Text>
+                <Text style={styles.userName}>{user.name}</Text>
+                <Text style={styles.userEmail}>{user.email}</Text>
             </View>
 
             <View style={styles.container}>
