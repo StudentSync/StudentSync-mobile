@@ -13,6 +13,7 @@ import Main from './src/components/BottomTabs';
 import ProfileStudent from './src/screens/ProfileStudent';
 import ProfileTeacher from './src/screens/ProfileTeacher';
 import OfficeDevelop from './src/screens/Office-develop';
+import Initial from './src/screens/Initial';
 import { RoleProvider } from './src/contexts/RoleContext';
 
 import AuthProvider from './src/contexts/auth';
@@ -49,7 +50,8 @@ export default function App() {
     <NavigationContainer style={styles.main}>
       <AuthProvider>
       <RoleProvider>
-        <Stack.Navigator initialRouteName='Login'>
+        <Stack.Navigator initialRouteName='Initial'>
+        <Stack.Screen name="Initial" component={Initial} options={{ headerShown: false }}/>
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
           <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
           <Stack.Screen name="Office" component={Office} options={{ headerShown: false }}/>
