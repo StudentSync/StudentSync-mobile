@@ -12,6 +12,8 @@ O app do Student Sync foi desenvolvido para dispositivos IOS/Android utilizando 
 
 ## Rodando o Projeto 🚀
 
+- Antes de rodar o app, certifique-se de estar rodando o servidor na porta 'localhost:3000' (![Repositório](https://github.com/StudentSync/StudentSync-api/tree/develop))
+
 - Antes de começar, certifique-se de ter o Node.js, o Expo CLI e o Expo Go instalados em sua máquina e dispositivo móvel.
 
 1. Clone o repositório:
