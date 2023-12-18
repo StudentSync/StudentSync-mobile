@@ -7,6 +7,6 @@ O app do Student Sync foi desenvolvido para dispositivos IOS/Android utilizando 
 - ![Axios Badge](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=fff&style=for-the-badge) -> Utilizado para requisições
 - ![React Navigation Badge](https://img.shields.io/badge/React_Navigation-673AB8?logo=react&logoColor=fff&style=for-the-badge) -> Utilizado para navegar
   
-## Exemplos
-
+## Preview
+![mockup](./assets/celllll.png)
 ## Rodando o Projeto
